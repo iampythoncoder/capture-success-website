@@ -41,6 +41,82 @@
   padding: 0.82rem 0.9rem;
 }
 
+.hero-social-panel {
+  gap: 0.7rem;
+}
+
+.hero-social-label {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  color: #3e5e8f;
+  font-weight: 700;
+  margin-bottom: 0.1rem;
+}
+
+.social-tile {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(44, 72, 116, 0.18);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: var(--shadow-soft);
+  padding: 0.9rem;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.social-tile:hover {
+  transform: translateY(-3px);
+  border-color: rgba(36, 66, 112, 0.35);
+  box-shadow: 0 18px 30px rgba(23, 43, 75, 0.14);
+}
+
+.social-icon {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 0.82rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(43, 70, 114, 0.2);
+  background: rgba(255, 255, 255, 0.92);
+  color: #1f4a89;
+  flex-shrink: 0;
+}
+
+.social-icon svg {
+  width: 1.45rem;
+  height: 1.45rem;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.social-copy {
+  display: grid;
+  gap: 0.16rem;
+}
+
+.social-copy strong {
+  color: #1a355f;
+  font-size: 0.96rem;
+  line-height: 1.15;
+}
+
+.social-copy small {
+  color: #536583;
+  font-size: 0.8rem;
+}
+
+.social-tile.instagram .social-icon {
+  color: #9a2d72;
+}
+
+.social-tile.discord .social-icon {
+  color: #4257b8;
+}
+
 .hero-panel h2 {
   font-size: 1rem;
 }
@@ -125,50 +201,6 @@
   color: var(--muted);
 }
 
-.home-difference {
-  padding-top: 3.2rem;
-}
-
-.difference-grid {
-  margin-top: 1.2rem;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.78rem;
-}
-
-.difference-card {
-  border-radius: var(--radius-md);
-  border: 1px solid rgba(39, 65, 104, 0.16);
-  background: rgba(255, 255, 255, 0.8);
-  box-shadow: var(--shadow-soft);
-  padding: 0.95rem;
-}
-
-.difference-card h3 {
-  font-size: 1.08rem;
-}
-
-.difference-card p {
-  margin-top: 0.46rem;
-  color: #4d5d72;
-}
-
-.difference-card strong {
-  display: inline-block;
-  margin-top: 0.65rem;
-  color: #1f457e;
-  font-size: 0.88rem;
-}
-
-.home-showcase-intro {
-  padding-top: 3.2rem;
-  padding-bottom: 1.8rem;
-}
-
-.home-showcase-intro .section-head h2 {
-  max-width: 16ch;
-}
-
 .home-lanes {
   padding-top: 3rem;
 }
@@ -199,7 +231,6 @@
 
 @media (max-width: 1040px) {
   .hero-grid,
-  .difference-grid,
   .lanes-grid,
   .process-grid,
   .metrics-row {

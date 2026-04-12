@@ -1,4 +1,5 @@
 (() => {
+  const DESTINATION_EMAIL = 'capturesuccessinc@gmail.com';
   const form = document.getElementById('capture-form');
   const modeButtons = Array.from(document.querySelectorAll('.mode-btn'));
   const modePanels = Array.from(document.querySelectorAll('[data-mode-panel]'));
@@ -10,6 +11,78 @@
   }
 
   let currentMode = 'join';
+
+  const fieldLabels = {
+    fullName: 'Full Name',
+    email: 'Email',
+    role: 'Role',
+    location: 'Location / Timezone',
+    linkedin: 'LinkedIn or Portfolio (Optional)',
+    joinIdea: 'Idea to Join',
+    skills: 'Skill Stack',
+    weeklyHours: 'Weekly Availability',
+    whyJoin: 'Why Join',
+    startupName: 'Startup Name',
+    deckUrl: 'Website / Deck',
+    problem: 'Problem',
+    traction: 'Current Traction',
+    rolesNeeded: 'Roles Needed',
+    equityPool: 'Equity Pool',
+    ideaSummary: 'Build Plan',
+  };
+
+  const joinFields = [
+    'fullName',
+    'email',
+    'role',
+    'location',
+    'linkedin',
+    'joinIdea',
+    'skills',
+    'weeklyHours',
+    'whyJoin',
+  ];
+
+  const submitFields = [
+    'fullName',
+    'email',
+    'role',
+    'location',
+    'linkedin',
+    'startupName',
+    'deckUrl',
+    'problem',
+    'traction',
+    'rolesNeeded',
+    'equityPool',
+    'ideaSummary',
+  ];
+
+  const buildEmailPayload = (data, mode) => {
+    const activeFields = mode === 'submit' ? submitFields : joinFields;
+    const lines = [
+      `Submission Type: ${mode === 'submit' ? 'Startup Submission' : 'Join Application'}`,
+      `Submitted At: ${new Date().toLocaleString()}`,
+      '',
+    ];
+
+    activeFields.forEach((field) => {
+      const value = (data[field] || '').toString().trim();
+      if (!value) {
+        return;
+      }
+      lines.push(`${fieldLabels[field]}: ${value}`);
+    });
+
+    const subject =
+      mode === 'submit'
+        ? `Capture Success Startup Submission - ${data.startupName || data.fullName || 'New'}`
+        : `Capture Success Join Application - ${data.fullName || 'New'}`;
+
+    const body = lines.join('\n');
+
+    return `mailto:${DESTINATION_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
 
   const setMode = (mode) => {
     currentMode = mode === 'submit' ? 'submit' : 'join';
@@ -67,12 +140,13 @@
     payload.mode = currentMode;
     payload.timestamp = new Date().toISOString();
 
-    console.log('Capture Success submission:', payload);
+    const mailtoUrl = buildEmailPayload(payload, currentMode);
+    window.location.href = mailtoUrl;
 
     success.textContent =
       currentMode === 'join'
-        ? 'Application received. We will review and reach out with the next step.'
-        : 'Startup submission received. We will follow up with a founder onboarding call.';
+        ? `Email draft opened to ${DESTINATION_EMAIL}. Send it to complete your application.`
+        : `Email draft opened to ${DESTINATION_EMAIL}. Send it to complete your startup submission.`;
     success.classList.remove('is-hidden');
 
     form.reset();
