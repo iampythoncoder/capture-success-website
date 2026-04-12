@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Apply to join startup teams on Capture Success or submit your startup for execution support."
+    />
+    <title>Apply | Capture Success</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./base.css" />
+    <link rel="stylesheet" href="./apply.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-a" data-parallax="-0.05" aria-hidden="true"></div>
+    <div class="bg-orb orb-b" data-parallax="0.05" aria-hidden="true"></div>
+    <div class="bg-grid" data-parallax="-0.03" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a class="brand" href="./index.html">
+          <span class="brand-mark" aria-hidden="true"></span>
+          Capture Success
+        </a>
+
+        <nav class="nav-links" aria-label="Primary">
+          <a href="./index.html">Home</a>
+          <a href="./ideas.html">Ideas</a>
+          <a class="is-current" href="./apply.html">Apply</a>
+        </nav>
+
+        <a class="btn btn-primary btn-small" href="./apply.html?mode=join">Join Now</a>
+      </div>
+      <div class="scroll-progress" aria-hidden="true"><span></span></div>
+    </header>
+
+    <main>
+      <section class="section apply-hero">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">Application</p>
+            <h1>Choose your path and apply in one form.</h1>
+            <p>Students can join startup teams. Founders can submit startups and recruit builders.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section form-section" id="apply-form">
+        <div class="container form-shell" data-reveal>
+          <div class="mode-toggle" role="tablist" aria-label="Application mode">
+            <button type="button" class="mode-btn is-active" data-mode="join">Join an Idea</button>
+            <button type="button" class="mode-btn" data-mode="submit">Submit Your Startup</button>
+          </div>
+
+          <form id="capture-form" novalidate>
+            <div class="form-grid two-col">
+              <label>
+                Full Name
+                <input name="fullName" type="text" placeholder="Your name" required />
+              </label>
+              <label>
+                Email
+                <input name="email" type="email" placeholder="you@domain.com" required />
+              </label>
+              <label>
+                Role
+                <select name="role" required>
+                  <option value="student">Student</option>
+                  <option value="founder">Founder</option>
+                  <option value="partner">Partner</option>
+                </select>
+              </label>
+              <label>
+                Location / Timezone
+                <input name="location" type="text" placeholder="New York (ET)" />
+              </label>
+              <label class="full-span">
+                LinkedIn or Portfolio
+                <input name="linkedin" type="url" placeholder="https://" />
+              </label>
+            </div>
+
+            <div class="mode-fields" data-mode-panel="join">
+              <div class="form-grid two-col">
+                <label class="full-span">
+                  Idea to Join
+                  <select name="joinIdea" required>
+                    <option value="">Select an idea</option>
+                    <option>PulsePatch Remote Health</option>
+                    <option>GridTwin Campus Energy</option>
+                    <option>LoopCrate Recommerce</option>
+                    <option>MicroBudget for Students</option>
+                    <option>SkyShield Wildfire Intel</option>
+                    <option>AquaTrace Leak Network</option>
+                  </select>
+                </label>
+                <label>
+                  Skill Stack
+                  <input name="skills" type="text" placeholder="Product, growth, design..." required />
+                </label>
+                <label>
+                  Weekly Availability
+                  <input name="weeklyHours" type="text" placeholder="6-8 hours" required />
+                </label>
+                <label class="full-span">
+                  Why should this team pick you?
+                  <textarea name="whyJoin" rows="4" placeholder="What outcomes can you drive in the next 60 days?" required></textarea>
+                </label>
+              </div>
+            </div>
+
+            <div class="mode-fields is-hidden" data-mode-panel="submit">
+              <div class="form-grid two-col">
+                <label>
+                  Startup Name
+                  <input name="startupName" type="text" placeholder="Name" />
+                </label>
+                <label>
+                  Website / Deck
+                  <input name="deckUrl" type="url" placeholder="https://" />
+                </label>
+                <label class="full-span">
+                  Problem
+                  <textarea name="problem" rows="3" placeholder="What problem are you solving?"></textarea>
+                </label>
+                <label>
+                  Current Traction
+                  <input name="traction" type="text" placeholder="Users, pilots, revenue, waitlist" />
+                </label>
+                <label>
+                  Roles Needed
+                  <input name="rolesNeeded" type="text" placeholder="Engineering, GTM, design" />
+                </label>
+                <label>
+                  Equity Pool for Contributors
+                  <input name="equityPool" type="text" placeholder="Example: 3% pool" />
+                </label>
+                <label class="full-span">
+                  Build Plan
+                  <textarea name="ideaSummary" rows="4" placeholder="What are the next milestones and execution plan?"></textarea>
+                </label>
+              </div>
+            </div>
+
+            <button class="btn btn-primary btn-full" id="submit-btn" type="submit">Submit Application</button>
+            <p class="form-success is-hidden" id="form-success"></p>
+            <p class="form-note">Prototype mode: submissions are captured locally in your browser console.</p>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>Capture Success</p>
+        <p>Build. Execute. Own.</p>
+      </div>
+    </footer>
+
+    <script src="./main.js"></script>
+    <script src="./apply.js"></script>
+  </body>
+</html>

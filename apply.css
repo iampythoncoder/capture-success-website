@@ -1,0 +1,125 @@
+.apply-hero {
+  padding-top: clamp(4.8rem, 9vw, 8.8rem);
+  padding-bottom: 1.8rem;
+}
+
+.apply-hero .section-head h1 {
+  max-width: 14ch;
+}
+
+.form-section {
+  padding-top: 1.6rem;
+}
+
+.form-shell {
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(36, 60, 97, 0.16);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.95), rgba(233, 241, 249, 0.86));
+  box-shadow: var(--shadow-lift);
+  padding: 1.1rem;
+}
+
+.mode-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.mode-btn {
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(40, 69, 113, 0.2);
+  background: rgba(255, 255, 255, 0.74);
+  padding: 0.62rem 0.74rem;
+  color: #365a91;
+  font-size: 0.86rem;
+  font-weight: 600;
+  transition: all 190ms ease;
+}
+
+.mode-btn.is-active {
+  border-color: rgba(30, 79, 146, 0.46);
+  background: linear-gradient(145deg, rgba(30, 79, 146, 0.14), rgba(15, 102, 114, 0.14));
+  color: #163d74;
+}
+
+.form-grid {
+  display: grid;
+  gap: 0.72rem;
+  margin-bottom: 0.86rem;
+}
+
+.form-grid.two-col {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.form-grid label {
+  display: grid;
+  gap: 0.34rem;
+  color: #1d3a69;
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.full-span {
+  grid-column: 1 / -1;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid rgba(45, 76, 125, 0.24);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.67rem 0.72rem;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #758caf;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: rgba(30, 79, 146, 0.58);
+  box-shadow: 0 0 0 3px rgba(30, 79, 146, 0.14);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 92px;
+}
+
+.mode-fields.is-hidden {
+  display: none;
+}
+
+.form-success {
+  margin-top: 0.76rem;
+  border: 1px solid rgba(15, 102, 114, 0.3);
+  background: rgba(15, 102, 114, 0.11);
+  border-radius: 12px;
+  padding: 0.62rem 0.74rem;
+  color: #0f535d;
+  font-size: 0.87rem;
+}
+
+.form-success.is-hidden {
+  display: none;
+}
+
+.form-note {
+  margin-top: 0.62rem;
+  color: #4d607f;
+  font-size: 0.79rem;
+}
+
+@media (max-width: 980px) {
+  .form-grid.two-col,
+  .mode-toggle {
+    grid-template-columns: 1fr;
+  }
+}

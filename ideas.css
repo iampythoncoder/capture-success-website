@@ -1,0 +1,130 @@
+.ideas-hero {
+  padding-top: clamp(4.8rem, 9vw, 8.8rem);
+  padding-bottom: 2rem;
+}
+
+.ideas-hero .section-head h1 {
+  max-width: 12ch;
+}
+
+.idea-kpis {
+  margin-top: 1.35rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.idea-kpis article {
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(40, 66, 106, 0.16);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: var(--shadow-soft);
+  padding: 0.85rem;
+}
+
+.idea-kpis span {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #45628f;
+  font-weight: 700;
+}
+
+.idea-kpis p {
+  margin-top: 0.3rem;
+  color: #16315a;
+  font-weight: 600;
+}
+
+.ideas-list {
+  padding-top: 2.2rem;
+}
+
+.ideas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.idea-card {
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(40, 66, 106, 0.16);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.93), rgba(236, 243, 251, 0.84));
+  box-shadow: var(--shadow-soft);
+  padding: 1rem;
+  display: grid;
+  gap: 0.62rem;
+}
+
+.idea-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+
+.idea-head p {
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(43, 72, 118, 0.2);
+  background: rgba(255, 255, 255, 0.76);
+  padding: 0.24rem 0.58rem;
+  font-size: 0.72rem;
+  color: #34598d;
+}
+
+.idea-head span {
+  font-size: 0.76rem;
+  color: #274a7c;
+  font-weight: 600;
+}
+
+.idea-card h3 {
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.idea-card > p {
+  color: #4d5c70;
+}
+
+.idea-card ul {
+  margin: 0;
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.34rem;
+}
+
+.idea-card li {
+  color: #35517b;
+  font-size: 0.86rem;
+}
+
+.ideas-contact {
+  margin-top: 0.9rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(42, 69, 111, 0.16);
+  background: linear-gradient(130deg, rgba(30, 79, 146, 0.11), rgba(15, 102, 114, 0.11));
+  padding: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.ideas-contact p {
+  color: #1f3f71;
+  font-weight: 500;
+}
+
+@media (max-width: 980px) {
+  .idea-kpis,
+  .ideas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ideas-contact {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
