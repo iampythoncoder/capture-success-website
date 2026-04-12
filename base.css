@@ -146,16 +146,23 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 0.68rem;
-  font-size: 0.96rem;
-  font-weight: 800;
+  min-width: 0;
 }
 
-.brand-mark {
-  width: 1.5rem;
-  aspect-ratio: 1;
-  border-radius: 0.48rem;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.48);
+.brand-mark-img {
+  width: 1.56rem;
+  height: 1.56rem;
+  border-radius: 0.44rem;
+  object-fit: cover;
+  box-shadow:
+    0 0 0 1px rgba(18, 45, 86, 0.24),
+    0 8px 16px rgba(24, 43, 74, 0.14);
+}
+
+.brand-text {
+  font-size: 0.96rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
 }
 
 .nav-links {
@@ -330,10 +337,31 @@ button {
 
 .footer-inner {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  gap: 0.8rem;
+  gap: 1rem;
+}
+
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-brand img {
+  display: block;
+  width: auto;
+  height: clamp(2.5rem, 4vw, 3.1rem);
+  border-radius: 0.72rem;
+  box-shadow:
+    0 0 0 1px rgba(29, 49, 83, 0.18),
+    0 12px 24px rgba(21, 36, 61, 0.12);
+}
+
+.footer-copy {
   color: #4d5b6f;
   font-size: 0.84rem;
+  max-width: 42ch;
+  text-align: right;
 }
 
 [data-reveal] {
@@ -368,6 +396,11 @@ button {
 
   .footer-inner {
     flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-copy {
+    text-align: left;
   }
 }
 

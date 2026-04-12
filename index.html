@@ -26,8 +26,8 @@
     <header class="topbar">
       <div class="container topbar-inner">
         <a class="brand" href="./index.html">
-          <span class="brand-mark" aria-hidden="true"></span>
-          Capture Success
+          <img class="brand-mark-img" src="./assets/logos/capture-mark.png" alt="" aria-hidden="true" />
+          <span class="brand-text">Capture Success</span>
         </a>
 
         <nav class="nav-links" aria-label="Primary">
@@ -55,9 +55,16 @@
               <a class="btn btn-secondary" href="./apply.html?mode=submit">Submit Your Startup</a>
               <a class="btn btn-ghost" href="./ideas.html">Browse Ideas</a>
             </div>
+            <div class="credibility-tags">
+              <span class="credibility-tag primary">501(c)(3) Nonprofit</span>
+              <span class="credibility-tag">Execution-Focused Student Platform</span>
+            </div>
           </div>
 
           <aside class="hero-panel hero-social-panel" data-reveal>
+            <a class="hero-logo-lockup" href="./index.html" aria-label="Capture Success home">
+              <img src="./assets/logos/capture-lockup.png" alt="Capture Success" />
+            </a>
             <p class="hero-social-label">Connect with Capture Success</p>
 
             <a
@@ -106,7 +113,91 @@
         </div>
       </section>
 
+      <section class="section trust-section">
+        <div class="container">
+          <div class="section-head trust-head" data-reveal>
+            <p class="eyebrow">Credibility</p>
+            <h2>Built with real startup ecosystem connections.</h2>
+            <p>
+              Capture Success Inc. is a certified 501(c)(3) nonprofit. We work with programs and communities across startup,
+              research, and innovation ecosystems.
+            </p>
+          </div>
+
+          <div class="trust-badges" data-reveal>
+            <article>
+              <span>Nonprofit Status</span>
+              <p>501(c)(3) certified organization</p>
+            </article>
+            <article>
+              <span>Operating Model</span>
+              <p>Student execution teams supporting real startups</p>
+            </article>
+            <article>
+              <span>Network Access</span>
+              <p>Connected through startup, innovation, and challenge ecosystems</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="container logo-marquee-shell" data-reveal>
+          <div class="logo-marquee" aria-label="Associated organizations">
+            <div class="logo-track">
+              <div class="logo-group">
+                <article class="org-logo wake-county">
+                  <img src="./assets/affiliates/wake-county.svg" alt="Wake County logo" loading="lazy" />
+                </article>
+                <article class="org-logo tie">
+                  <img src="./assets/affiliates/tie-young-entrepreneurs.png" alt="TiE Young Entrepreneurs logo" loading="lazy" />
+                </article>
+                <article class="org-logo mit">
+                  <img src="./assets/affiliates/mit.svg" alt="MIT logo" loading="lazy" />
+                </article>
+                <article class="org-logo isef">
+                  <img src="./assets/affiliates/isef.png" alt="ISEF logo" loading="lazy" />
+                </article>
+                <article class="org-logo ces">
+                  <img src="./assets/affiliates/ces.svg" alt="CES logo" loading="lazy" />
+                </article>
+              </div>
+              <div class="logo-group" aria-hidden="true">
+                <article class="org-logo wake-county">
+                  <img src="./assets/affiliates/wake-county.svg" alt="" loading="lazy" />
+                </article>
+                <article class="org-logo tie">
+                  <img src="./assets/affiliates/tie-young-entrepreneurs.png" alt="" loading="lazy" />
+                </article>
+                <article class="org-logo mit">
+                  <img src="./assets/affiliates/mit.svg" alt="" loading="lazy" />
+                </article>
+                <article class="org-logo isef">
+                  <img src="./assets/affiliates/isef.png" alt="" loading="lazy" />
+                </article>
+                <article class="org-logo ces">
+                  <img src="./assets/affiliates/ces.svg" alt="" loading="lazy" />
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="section compact-block">
+        <div class="container impact-band" data-reveal>
+          <article class="impact-item">
+            <strong>20+</strong>
+            <p>Startups scaled.</p>
+          </article>
+          <article class="impact-item">
+            <strong>50+</strong>
+            <p>Ideas handed out.</p>
+          </article>
+          <article class="impact-item">
+            <strong>$20,000</strong>
+            <p>Handed out in funding.</p>
+          </article>
+        </div>
+
         <div class="container metrics-row" data-reveal>
           <article>
             <span>What It Is</span>
@@ -259,8 +350,10 @@
 
     <footer class="footer">
       <div class="container footer-inner">
-        <p>Capture Success</p>
-        <p>Build. Execute. Own.</p>
+        <a class="footer-brand" href="./index.html" aria-label="Capture Success home">
+          <img src="./assets/logos/capture-lockup.png" alt="Capture Success" />
+        </a>
+        <p class="footer-copy">Capture Success Inc. is a certified 501(c)(3) nonprofit helping students and founders build real startups.</p>
       </div>
     </footer>
 
