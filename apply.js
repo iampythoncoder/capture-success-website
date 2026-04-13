@@ -18,7 +18,7 @@
     role: 'Role',
     location: 'Location / Timezone',
     linkedin: 'LinkedIn or Portfolio (Optional)',
-    joinIdea: 'Idea to Join',
+    joinPool: 'Pool Placement',
     skills: 'Skill Stack',
     weeklyHours: 'Weekly Availability',
     whyJoin: 'Why Join',
@@ -37,7 +37,7 @@
     'role',
     'location',
     'linkedin',
-    'joinIdea',
+    'joinPool',
     'skills',
     'weeklyHours',
     'whyJoin',
@@ -118,14 +118,6 @@
 
   if (initialMode === 'submit') {
     setMode('submit');
-  }
-
-  const initialIdea = params.get('idea');
-  if (initialIdea) {
-    const select = form.querySelector('select[name="joinIdea"]');
-    if (select) {
-      select.value = initialIdea;
-    }
   }
 
   form.addEventListener('submit', (event) => {

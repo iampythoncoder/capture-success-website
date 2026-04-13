@@ -1,13 +1,13 @@
 :root {
-  --bg-0: #f2f4f7;
-  --bg-1: #ecf0f5;
+  --bg-0: #f8f9fb;
+  --bg-1: #f2f4f8;
   --surface: #ffffff;
-  --surface-soft: rgba(255, 255, 255, 0.82);
-  --ink: #0f1723;
-  --muted: #516072;
-  --line: #d6dde7;
-  --accent: #1e4f92;
-  --accent-2: #0f6672;
+  --surface-soft: rgba(255, 255, 255, 0.86);
+  --ink: #111827;
+  --muted: #4b5563;
+  --line: #d6dce6;
+  --accent: #1d3f6d;
+  --accent-2: #2c5e8f;
   --radius-sm: 12px;
   --radius-md: 18px;
   --radius-lg: 26px;
@@ -31,9 +31,9 @@ body {
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   color: var(--ink);
   background:
-    radial-gradient(circle at 82% 8%, rgba(30, 79, 146, 0.09), transparent 34%),
-    radial-gradient(circle at 12% 22%, rgba(15, 102, 114, 0.09), transparent 36%),
-    linear-gradient(165deg, var(--bg-0) 0%, #f8fafd 40%, var(--bg-1) 100%);
+    radial-gradient(circle at 84% 8%, rgba(29, 63, 109, 0.06), transparent 34%),
+    radial-gradient(circle at 12% 20%, rgba(44, 94, 143, 0.05), transparent 36%),
+    linear-gradient(180deg, var(--bg-0) 0%, var(--bg-1) 100%);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   min-height: 100%;
@@ -96,7 +96,7 @@ button {
   aspect-ratio: 1;
   top: -9rem;
   left: -10rem;
-  background: radial-gradient(circle at 38% 38%, rgba(30, 79, 146, 0.34), rgba(30, 79, 146, 0));
+  background: radial-gradient(circle at 38% 38%, rgba(29, 63, 109, 0.18), rgba(29, 63, 109, 0));
 }
 
 .orb-b {
@@ -104,15 +104,15 @@ button {
   aspect-ratio: 1;
   right: -8rem;
   bottom: -12rem;
-  background: radial-gradient(circle at 42% 42%, rgba(15, 102, 114, 0.28), rgba(15, 102, 114, 0));
+  background: radial-gradient(circle at 42% 42%, rgba(44, 94, 143, 0.16), rgba(44, 94, 143, 0));
 }
 
 .bg-grid {
   inset: 0;
   z-index: -1;
   background-image:
-    linear-gradient(rgba(41, 60, 93, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(41, 60, 93, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(41, 60, 93, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(41, 60, 93, 0.03) 1px, transparent 1px);
   background-size: 54px 54px;
   mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.55), transparent 80%);
   transform: translate3d(0, var(--parallax-y, 0px), 0);
@@ -123,8 +123,8 @@ button {
   position: sticky;
   top: 0;
   z-index: 40;
-  border-bottom: 1px solid rgba(29, 47, 78, 0.12);
-  background: linear-gradient(90deg, rgba(244, 248, 253, 0.86), rgba(237, 243, 250, 0.84));
+  border-bottom: 1px solid rgba(29, 47, 78, 0.08);
+  background: rgba(249, 250, 252, 0.92);
   backdrop-filter: blur(14px);
   box-shadow: 0 6px 16px rgba(47, 66, 102, 0.05);
   transition: box-shadow 220ms ease;
@@ -276,20 +276,20 @@ button {
 
 .btn-primary {
   color: #fff;
-  background: linear-gradient(112deg, #1f4f92, #245088 56%, #0f6672);
-  box-shadow: 0 11px 24px rgba(31, 79, 146, 0.28);
+  background: #1d3f6d;
+  box-shadow: 0 10px 20px rgba(29, 63, 109, 0.22);
 }
 
 .btn-secondary {
-  color: #173a6e;
-  border-color: rgba(45, 78, 131, 0.26);
-  background: rgba(255, 255, 255, 0.7);
+  color: #233955;
+  border-color: rgba(39, 56, 85, 0.22);
+  background: rgba(255, 255, 255, 0.88);
 }
 
 .btn-ghost {
-  color: #2b476d;
-  border-color: rgba(43, 71, 109, 0.2);
-  background: rgba(255, 255, 255, 0.42);
+  color: #3c4f66;
+  border-color: rgba(57, 74, 99, 0.16);
+  background: rgba(255, 255, 255, 0.66);
 }
 
 .btn-full {
@@ -298,9 +298,9 @@ button {
 
 .final-card {
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(46, 69, 109, 0.16);
-  background: linear-gradient(165deg, rgba(255, 255, 255, 0.92), rgba(237, 243, 250, 0.86));
-  box-shadow: var(--shadow-lift);
+  border: 1px solid rgba(45, 65, 96, 0.14);
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 16px 34px rgba(22, 32, 49, 0.12);
   text-align: center;
   max-width: 760px;
   margin: 0 auto;
@@ -367,7 +367,7 @@ button {
 [data-reveal] {
   opacity: 0;
   transform: translate3d(0, 22px, 0);
-  filter: blur(9px);
+  filter: blur(5px);
   transition:
     opacity 620ms cubic-bezier(0.2, 0.7, 0.2, 1),
     transform 760ms cubic-bezier(0.16, 0.79, 0.21, 1),
