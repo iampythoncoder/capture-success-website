@@ -7,6 +7,41 @@
   max-width: 13ch;
 }
 
+:where(
+    .kpi-grid article,
+    .sticky-panel,
+    .sticky-bars article,
+    .scene-step,
+    .scene-modules article,
+    .surface-card,
+    .scene-head span
+  ) {
+  border-color: rgba(38, 67, 112, 0.3);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.74), rgba(226, 238, 252, 0.34));
+  box-shadow:
+    0 18px 32px rgba(18, 31, 53, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(16px) saturate(142%);
+  -webkit-backdrop-filter: blur(16px) saturate(142%);
+  position: relative;
+  overflow: hidden;
+}
+
+:where(.kpi-grid article, .sticky-panel, .sticky-bars article, .scene-step, .scene-modules article, .surface-card)::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 48%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.58), rgba(255, 255, 255, 0));
+  pointer-events: none;
+  z-index: 0;
+}
+
+:where(.kpi-grid article *, .sticky-panel *, .sticky-bars article *, .scene-step *, .scene-modules article *, .surface-card *) {
+  position: relative;
+  z-index: 1;
+}
+
 .kpi-grid {
   margin-top: 1.5rem;
   display: grid;
@@ -16,9 +51,13 @@
 
 .kpi-grid article {
   border-radius: var(--radius-md);
-  border: 1px solid rgba(37, 62, 102, 0.16);
-  background: rgba(255, 255, 255, 0.82);
-  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(37, 62, 102, 0.24);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.7), rgba(227, 239, 252, 0.38));
+  box-shadow:
+    0 18px 30px rgba(20, 32, 53, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px) saturate(132%);
+  -webkit-backdrop-filter: blur(12px) saturate(132%);
   padding: 0.9rem;
 }
 
@@ -53,9 +92,13 @@
   position: sticky;
   top: 102px;
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(37, 61, 98, 0.18);
-  background: linear-gradient(155deg, rgba(255, 255, 255, 0.96), rgba(233, 240, 249, 0.88));
-  box-shadow: var(--shadow-lift);
+  border: 1px solid rgba(37, 61, 98, 0.24);
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.76), rgba(224, 236, 252, 0.44));
+  box-shadow:
+    0 26px 44px rgba(18, 30, 53, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.74);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
   padding: 1.2rem;
   min-height: calc(100vh - 140px);
   display: grid;
@@ -89,8 +132,10 @@
 
 .sticky-bars article {
   border-radius: 12px;
-  border: 1px solid rgba(44, 72, 115, 0.14);
-  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(44, 72, 115, 0.24);
+  background: rgba(255, 255, 255, 0.58);
+  backdrop-filter: blur(11px) saturate(130%);
+  -webkit-backdrop-filter: blur(11px) saturate(130%);
   padding: 0.62rem;
 }
 
@@ -144,9 +189,13 @@
 .scene-step {
   min-height: 70vh;
   border-radius: var(--radius-md);
-  border: 1px solid rgba(40, 66, 106, 0.16);
-  background: rgba(255, 255, 255, 0.74);
-  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(40, 66, 106, 0.24);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.68), rgba(226, 238, 252, 0.34));
+  box-shadow:
+    0 20px 32px rgba(20, 31, 51, 0.13),
+    inset 0 1px 0 rgba(255, 255, 255, 0.68);
+  backdrop-filter: blur(14px) saturate(134%);
+  -webkit-backdrop-filter: blur(14px) saturate(134%);
   padding: 1.1rem;
   display: grid;
   gap: 0.85rem;
@@ -157,7 +206,7 @@
 .scene-step.is-active {
   transform: translateY(-4px);
   border-color: rgba(31, 79, 146, 0.38);
-  background: linear-gradient(155deg, rgba(255, 255, 255, 0.94), rgba(234, 242, 252, 0.88));
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.78), rgba(220, 236, 253, 0.48));
 }
 
 .scene-head {
@@ -177,11 +226,13 @@
 
 .scene-head span {
   border-radius: var(--radius-pill);
-  border: 1px solid rgba(48, 77, 124, 0.18);
-  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(48, 77, 124, 0.26);
+  background: rgba(255, 255, 255, 0.56);
   padding: 0.26rem 0.6rem;
   font-size: 0.73rem;
   color: #274979;
+  backdrop-filter: blur(10px) saturate(126%);
+  -webkit-backdrop-filter: blur(10px) saturate(126%);
 }
 
 .scene-step h3 {
@@ -203,8 +254,10 @@
 
 .scene-modules article {
   border-radius: 12px;
-  border: 1px solid rgba(46, 74, 118, 0.16);
-  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(46, 74, 118, 0.24);
+  background: rgba(255, 255, 255, 0.56);
+  backdrop-filter: blur(11px) saturate(130%);
+  -webkit-backdrop-filter: blur(11px) saturate(130%);
   padding: 0.64rem;
 }
 
@@ -232,9 +285,13 @@
 
 .surface-card {
   border-radius: var(--radius-md);
-  border: 1px solid rgba(37, 63, 102, 0.16);
-  background: rgba(255, 255, 255, 0.8);
-  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(37, 63, 102, 0.24);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.68), rgba(226, 238, 252, 0.34));
+  box-shadow:
+    0 18px 30px rgba(19, 31, 52, 0.13),
+    inset 0 1px 0 rgba(255, 255, 255, 0.68);
+  backdrop-filter: blur(13px) saturate(132%);
+  -webkit-backdrop-filter: blur(13px) saturate(132%);
   padding: 0.95rem;
 }
 

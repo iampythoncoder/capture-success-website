@@ -8,10 +8,6 @@
       content="Capture Success connects students with real startup teams and helps founders build faster with committed contributors."
     />
     <title>Capture Success | Build. Execute. Own.</title>
-    <link rel="icon" type="image/png" sizes="48x48" href="./favicon-48x48.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="./favicon-192x192.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
-    <link rel="manifest" href="./site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -36,11 +32,14 @@
 
         <nav class="nav-links" aria-label="Primary">
           <a class="is-current" href="./index.html">Home</a>
-          <a href="./ideas.html">How It Works</a>
+          <a href="./ideas.html">Ideas</a>
           <a href="./apply.html">Apply</a>
         </nav>
 
-        <a class="btn btn-primary btn-small" href="./apply.html?mode=join">Join Now</a>
+        <div class="topbar-actions">
+          <a class="btn btn-ghost btn-small" href="#home-gallery">View Gallery</a>
+          <a class="btn btn-primary btn-small" href="./apply.html?mode=join">Join Now</a>
+        </div>
       </div>
       <div class="scroll-progress" aria-hidden="true"><span></span></div>
     </header>
@@ -57,7 +56,8 @@
             <div class="hero-actions">
               <a class="btn btn-primary" href="./apply.html?mode=join">Join Now</a>
               <a class="btn btn-secondary" href="./apply.html?mode=submit">Submit Your Startup</a>
-              <a class="btn btn-ghost" href="./ideas.html">How It Works</a>
+              <a class="btn btn-secondary" href="#home-gallery">View Gallery</a>
+              <a class="btn btn-ghost" href="./ideas.html">Browse Ideas</a>
             </div>
             <div class="credibility-tags">
               <span class="credibility-tag primary">501(c)(3) Nonprofit</span>
@@ -122,10 +122,7 @@
           <div class="section-head trust-head" data-reveal>
             <p class="eyebrow">Credibility</p>
             <h2>Built with real startup ecosystem connections.</h2>
-            <p>
-              Capture Success Inc. is a certified 501(c)(3) nonprofit. We work with programs and communities across startup,
-              research, and innovation ecosystems.
-            </p>
+           
           </div>
 
           <div class="trust-badges" data-reveal>
@@ -203,69 +200,27 @@
         </div>
       </section>
 
-      <section class="section stories" id="stories">
+      <section class="section process">
         <div class="container">
           <div class="section-head" data-reveal>
-            <p class="eyebrow">From The Community</p>
-            <h2>Students and founders doing real work together.</h2>
-            <p>
-              The platform runs on consistent communication, clear deliverables, and people who actually execute each week.
-            </p>
+            <p class="eyebrow">How it works</p>
+            <h2>Three simple steps.</h2>
           </div>
-
-          <div class="stories-grid">
-            <article class="story-card" data-reveal>
-              <div class="story-head">
-                <span class="story-avatar avatar-student">SC</span>
-                <div>
-                  <h3>Student Contributor</h3>
-                  <p>Product + Operations</p>
-                </div>
-              </div>
-              <p class="story-quote">
-                "The biggest change for me was pace. You are expected to ship something every week, not just talk about ideas."
-              </p>
-              <div class="story-tags">
-                <span>Weekly deliverables</span>
-                <span>Founder feedback</span>
-                <span>Equity-based upside</span>
-              </div>
+          <div class="process-grid">
+            <article class="process-card" data-reveal>
+              <p>01</p>
+              <h3>Apply</h3>
+              <p>Tell us your skills, your preferred role, and your weekly availability.</p>
             </article>
-
-            <article class="story-card" data-reveal>
-              <div class="story-head">
-                <span class="story-avatar avatar-founder">FD</span>
-                <div>
-                  <h3>Founder</h3>
-                  <p>Early-stage startup</p>
-                </div>
-              </div>
-              <p class="story-quote">
-                "I came in needing hands-on support. Within weeks, I had contributors handling real product and growth tasks."
-              </p>
-              <div class="story-tags">
-                <span>Team support</span>
-                <span>Faster iteration</span>
-                <span>Clear accountability</span>
-              </div>
+            <article class="process-card" data-reveal>
+              <p>02</p>
+              <h3>Match</h3>
+              <p>We place you into a startup team where you can contribute right away.</p>
             </article>
-
-            <article class="story-card" data-reveal>
-              <div class="story-head">
-                <span class="story-avatar avatar-mentor">MT</span>
-                <div>
-                  <h3>Program Mentor</h3>
-                  <p>Startup operator</p>
-                </div>
-              </div>
-              <p class="story-quote">
-                "What stands out is ownership. Students are treated as contributors, and founders get measurable execution support."
-              </p>
-              <div class="story-tags">
-                <span>Structured cadence</span>
-                <span>Practical learning</span>
-                <span>Real startup context</span>
-              </div>
+            <article class="process-card" data-reveal>
+              <p>03</p>
+              <h3>Build + Own</h3>
+              <p>You ship real work, build a track record, and earn ownership through contribution.</p>
             </article>
           </div>
         </div>
@@ -291,19 +246,19 @@
 
             <div class="sticky-bars" id="panel-bars">
               <article>
-                <span>Founder Response</span>
-                <strong>24-72h</strong>
-                <i style="--bar-width: 68%"></i>
+                <span>Signal Score</span>
+                <strong>92%</strong>
+                <i style="--bar-width: 92%"></i>
               </article>
               <article>
-                <span>Role Definitions</span>
-                <strong>Required</strong>
-                <i style="--bar-width: 74%"></i>
+                <span>Scope Clarity</span>
+                <strong>88%</strong>
+                <i style="--bar-width: 88%"></i>
               </article>
               <article>
-                <span>Project Scope</span>
-                <strong>Reviewed</strong>
-                <i style="--bar-width: 72%"></i>
+                <span>Response Velocity</span>
+                <strong>81%</strong>
+                <i style="--bar-width: 81%"></i>
               </article>
             </div>
 
@@ -369,11 +324,93 @@
       <section class="section final-cta">
         <div class="container final-card" data-reveal>
           <p class="eyebrow">Next step</p>
-          <h2>Stop watching. Start building.</h2>
-          <p>Join as a student contributor or submit your startup and build with a committed team.</p>
+          <h2>Explore ideas. Then execute.</h2>
+          <p>Browse current startup ideas or apply directly.</p>
           <div class="hero-actions center">
-            <a class="btn btn-secondary" href="./apply.html?mode=submit">Submit Your Startup</a>
-            <a class="btn btn-primary" href="./apply.html?mode=join">Join Now</a>
+            <a class="btn btn-secondary" href="./ideas.html">Open Ideas</a>
+            <a class="btn btn-primary" href="./apply.html?mode=join">Apply Now</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section photo-glass" id="home-gallery">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">Gallery</p>
+            <h2>Real moments from the Capture Success community.</h2>
+            <p>From campus events to startup floors and press coverage.</p>
+          </div>
+
+          <div class="glass-controls" data-reveal>
+            <span class="glass-pill is-live"><i></i>Live Community</span>
+            <span class="glass-pill">Students + founders</span>
+            <span class="glass-pill">Execution-first culture</span>
+            <span class="glass-pill">Nonprofit, real outcomes</span>
+          </div>
+
+          <div class="photo-glass-grid">
+            <article class="photo-card photo-card-large" data-reveal>
+              <img
+                src="./assets/photos/community-crowd.jpg"
+                alt="Students and founders gathering outdoors at a Capture Success community event."
+                loading="lazy"
+              />
+              <span class="photo-status"><i></i>Community Day</span>
+              <div class="photo-overlay">
+                <p>March 2026 · Build Session</p>
+                <h3>Teams, mentors, and founders in one working community.</h3>
+              </div>
+            </article>
+
+            <article class="photo-card photo-card-duo" data-reveal>
+              <img
+                src="./assets/photos/community-duo.jpg"
+                alt="Two participants smiling and posing at a Capture Success meetup."
+                loading="lazy"
+              />
+              <div class="photo-overlay">
+                <p>Student energy</p>
+                <h3>Built by people who show up and execute.</h3>
+              </div>
+            </article>
+
+            <article class="photo-card photo-card-ces" data-reveal>
+              <img
+                src="./assets/photos/ces-floor.jpg"
+                alt="Capture Success representative presenting at a startup conference."
+                loading="lazy"
+              />
+              <span class="photo-status">Conference</span>
+              <div class="photo-overlay">
+                <p>CES Floor</p>
+                <h3>In real founder rooms where startup conversations happen.</h3>
+              </div>
+            </article>
+
+            <article class="photo-card photo-card-news" data-reveal>
+              <img
+                src="./assets/photos/capture-news.png"
+                alt="TV news coverage featuring Capture Success."
+                loading="lazy"
+              />
+              <span class="photo-status">Press</span>
+              <div class="photo-overlay">
+                <p>Media signal</p>
+                <h3>Recognized for helping students build real businesses.</h3>
+              </div>
+            </article>
+
+            <article class="photo-card photo-card-video" data-reveal>
+              <video autoplay muted loop playsinline preload="metadata" poster="./assets/photos/community-crowd.jpg">
+                <source src="./assets/photos/capture-event.mp4" type="video/mp4" />
+                <source src="./assets/photos/capture-event.mov" type="video/quicktime" />
+              </video>
+              <span class="photo-status"><i></i>Event Clip</span>
+              <div class="photo-overlay">
+                <p>Conference floor</p>
+                <h3>Capture Success represented where startup conversations happen.</h3>
+              </div>
+            </article>
           </div>
         </div>
       </section>
