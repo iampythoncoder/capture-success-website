@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="How Capture Success works: founders submit startups, students join teams, and execution is tracked weekly."
+      content="How Capture Success works: founders submit startups, students join teams, and teams build weekly."
     />
     <title>How It Works | Capture Success</title>
     <link rel="icon" type="image/png" sizes="48x48" href="./favicon-48x48.png" />
@@ -14,12 +14,9 @@
     <link rel="manifest" href="./site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./base.css" />
-    <link rel="stylesheet" href="./ideas.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./base.css?v=linear20260420n" />
+    <link rel="stylesheet" href="./ideas.css?v=linear20260420n" />
   </head>
   <body>
     <div class="bg-orb orb-a" data-parallax="-0.06" aria-hidden="true"></div>
@@ -30,12 +27,13 @@
       <div class="container topbar-inner">
         <a class="brand" href="./index.html">
           <img class="brand-mark-img" src="./assets/logos/capture-mark.png" alt="" aria-hidden="true" />
-          <span class="brand-text">Capture Success</span>
+          <span class="brand-text">Capture <span class="brand-success">Success</span></span>
         </a>
 
         <nav class="nav-links" aria-label="Primary">
           <a href="./index.html">Home</a>
           <a class="is-current" href="./ideas.html">How It Works</a>
+          <a href="./teams.html">Teams</a>
           <a href="./apply.html">Apply</a>
         </nav>
 
@@ -51,7 +49,7 @@
             <p class="eyebrow">How It Works</p>
             <h1>How It Works</h1>
             <p>
-              Capture Success runs on a simple operating model: clear startup scope, matched contributors, weekly delivery, and transparent ownership records.
+              Founders submit clear needs. Students get matched. Teams build weekly with tracked contributions.
             </p>
             <div class="hero-chips">
               <span>Founder Intake</span>
@@ -62,7 +60,7 @@
           </div>
 
           <aside class="hero-visual" data-reveal>
-            <p class="hero-visual-title">Execution Flow</p>
+            <p class="hero-visual-title">Platform Flow</p>
             <div class="hero-flow-list">
               <article>
                 <strong>Submit</strong>
@@ -70,7 +68,7 @@
               </article>
               <article>
                 <strong>Match</strong>
-                <p>Students are routed by role fit.</p>
+                <p>Students are matched by role fit.</p>
               </article>
               <article>
                 <strong>Build</strong>
@@ -78,7 +76,7 @@
               </article>
               <article>
                 <strong>Review</strong>
-                <p>Progress and ownership are recorded.</p>
+                <p>Progress and ownership are logged.</p>
               </article>
             </div>
           </aside>
@@ -89,24 +87,46 @@
         <div class="container">
           <div class="section-head compact" data-reveal>
             <p class="eyebrow">3-Step Path</p>
-            <h2>Exactly how people use the platform.</h2>
+            <h2>The core loop.</h2>
           </div>
 
           <div class="steps-grid">
             <article class="step-card" data-reveal>
               <span class="step-index">01</span>
-              <h3>01 — Apply</h3>
-              <p>Join the platform and tell us your interests or submit your startup.</p>
+              <span class="step-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <rect x="4" y="4" width="16" height="16" rx="3"></rect>
+                  <path d="M8 10h8"></path>
+                  <path d="M8 14h5"></path>
+                </svg>
+              </span>
+              <h3>Apply</h3>
+              <p>Apply as a student or submit a startup.</p>
             </article>
             <article class="step-card" data-reveal>
               <span class="step-index">02</span>
-              <h3>02 — Get Matched</h3>
-              <p>Students join real startups. Founders get matched with driven contributors.</p>
+              <span class="step-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="8.5" cy="9" r="2.5"></circle>
+                  <circle cx="15.5" cy="15" r="2.5"></circle>
+                  <path d="M10.5 10.8l2.8 2.4"></path>
+                </svg>
+              </span>
+              <h3>Get Matched</h3>
+              <p>Students join startup teams. Founders get matched with contributors.</p>
             </article>
             <article class="step-card" data-reveal>
               <span class="step-index">03</span>
-              <h3>03 — Build + Earn</h3>
-              <p>Work on real projects, ship results, and earn equity based on your contributions.</p>
+              <span class="step-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M5 17h14"></path>
+                  <path d="M8 17v-5"></path>
+                  <path d="M12 17V8"></path>
+                  <path d="M16 17v-3"></path>
+                </svg>
+              </span>
+              <h3>Build + Earn</h3>
+              <p>Ship real work and earn ownership through contribution.</p>
             </article>
           </div>
         </div>
@@ -116,29 +136,64 @@
         <div class="container">
           <div class="section-head compact" data-reveal>
             <p class="eyebrow">Pipeline</p>
-            <h2>How startup ideas move through Capture Success.</h2>
+            <h2>How projects move through Capture Success.</h2>
           </div>
 
           <div class="pipeline-track" data-reveal>
             <article class="pipeline-node">
+              <span class="pipeline-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M5 7h14"></path>
+                  <path d="M5 12h9"></path>
+                  <path d="M5 17h6"></path>
+                </svg>
+              </span>
               <strong>Founder Brief</strong>
-              <p>Startup goals and role needs are submitted.</p>
+              <p>Founders submit goals and role needs.</p>
             </article>
             <article class="pipeline-node">
+              <span class="pipeline-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="7"></circle>
+                  <path d="M9.2 12.3l2 2.1 3.7-4.1"></path>
+                </svg>
+              </span>
               <strong>Scope Review</strong>
-              <p>Projects are validated for execution readiness.</p>
+              <p>Projects are reviewed for clarity and readiness.</p>
             </article>
             <article class="pipeline-node">
+              <span class="pipeline-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="8.5" cy="9" r="2.4"></circle>
+                  <circle cx="15.5" cy="15" r="2.4"></circle>
+                  <path d="M10.4 10.8l3.2 2.8"></path>
+                </svg>
+              </span>
               <strong>Team Setup</strong>
-              <p>Students are matched into focused contributor lanes.</p>
+              <p>Students are matched into focused teams.</p>
             </article>
             <article class="pipeline-node">
+              <span class="pipeline-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M5 18h14"></path>
+                  <path d="M8 18v-5"></path>
+                  <path d="M12 18V9"></path>
+                  <path d="M16 18v-3"></path>
+                </svg>
+              </span>
               <strong>Sprint Delivery</strong>
-              <p>Teams ship tasks and report weekly outcomes.</p>
+              <p>Teams ship tasks and report weekly progress.</p>
             </article>
             <article class="pipeline-node">
+              <span class="pipeline-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <rect x="5" y="4" width="14" height="16" rx="3"></rect>
+                  <path d="M9 10h6"></path>
+                  <path d="M9 14h4"></path>
+                </svg>
+              </span>
               <strong>Ownership Log</strong>
-              <p>Contribution records support equity discussions.</p>
+              <p>Contribution records support ownership decisions.</p>
             </article>
           </div>
         </div>
@@ -148,22 +203,22 @@
         <div class="container role-grid">
           <article class="role-card" data-reveal>
             <h2>What founders bring</h2>
-            <ul>
-              <li>Clear startup problem and current stage</li>
-              <li>Near-term priorities for the next sprint window</li>
-              <li>Roles needed across product, growth, or operations</li>
-              <li>Consistent communication with the contributor team</li>
-            </ul>
+            <div class="role-copy">
+              <p><strong>Problem + Stage:</strong> Clear startup problem and current stage.</p>
+              <p><strong>Sprint Priorities:</strong> Near-term priorities for the next sprint.</p>
+              <p><strong>Roles Needed:</strong> Product, growth, design, or operations roles.</p>
+              <p><strong>Communication:</strong> Consistent updates with the team each week.</p>
+            </div>
           </article>
 
           <article class="role-card" data-reveal>
             <h2>What students commit to</h2>
-            <ul>
-              <li>Consistent weekly availability</li>
-              <li>Ownership of specific tasks and measurable outcomes</li>
-              <li>Active communication with founders and teammates</li>
-              <li>Execution in real startup conditions, not simulations</li>
-            </ul>
+            <div class="role-copy">
+              <p><strong>Weekly Availability:</strong> Consistent time each week.</p>
+              <p><strong>Task Ownership:</strong> Clear ownership of tasks and outcomes.</p>
+              <p><strong>Team Communication:</strong> Active communication with founders and teammates.</p>
+              <p><strong>Real Delivery:</strong> Real startup output, not simulation work.</p>
+            </div>
           </article>
         </div>
       </section>
@@ -172,20 +227,20 @@
         <div class="container">
           <div class="section-head" data-reveal>
             <p class="eyebrow">Weekly Rhythm</p>
-            <h2>What a normal execution week looks like.</h2>
+            <h2>What a normal week looks like.</h2>
           </div>
           <div class="rhythm-grid">
             <article data-reveal>
               <h3>Monday</h3>
-              <p>Set sprint goals, owners, and delivery targets.</p>
+              <p>Set goals, owners, and deadlines.</p>
             </article>
             <article data-reveal>
               <h3>Midweek</h3>
-              <p>Ship progress and unblock issues with founder feedback.</p>
+              <p>Ship progress and unblock issues.</p>
             </article>
             <article data-reveal>
               <h3>Friday</h3>
-              <p>Review outcomes, document contributions, and reset.</p>
+              <p>Review outcomes, log contributions, and reset.</p>
             </article>
           </div>
         </div>

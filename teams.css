@@ -1,0 +1,210 @@
+.teams-page .section {
+  padding: clamp(2.6rem, 4.8vw, 3.8rem) 0;
+}
+
+.team-hero {
+  padding-top: clamp(3rem, 6.4vw, 4.6rem);
+}
+
+.team-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.team-hero .section-head h1 {
+  max-width: 11ch;
+  font-size: clamp(2rem, 4.3vw, 3.1rem);
+}
+
+.hero-statement {
+  margin-top: 0.78rem;
+  font-size: clamp(0.96rem, 1.7vw, 1.08rem);
+  line-height: 1.58;
+  color: var(--text-soft);
+}
+
+.hero-statement strong {
+  color: var(--text);
+}
+
+.award-slab {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.8rem;
+  align-items: center;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  padding: 0.8rem;
+}
+
+.award-slab img {
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
+  max-height: 400px;
+  border-radius: 14px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.award-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 780;
+}
+
+.award-slab strong {
+  display: block;
+  margin-top: 0.32rem;
+  color: var(--text);
+  font-size: clamp(1.06rem, 1.72vw, 1.34rem);
+}
+
+.team-photo {
+  margin: 0;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-md);
+  padding: 0.72rem;
+  display: grid;
+  gap: 0.56rem;
+}
+
+.team-photo img {
+  display: block;
+  width: 100%;
+  max-height: 720px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 14px;
+  background: #06080d;
+}
+
+.team-photo figcaption {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+.presentation-reel {
+  padding-top: 1.3rem;
+}
+
+.reel-shell {
+  margin-top: 0.86rem;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  padding: 0.72rem;
+}
+
+.reel-shell video {
+  display: block;
+  width: 100%;
+  max-height: 640px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #02040a;
+}
+
+.leadership {
+  padding-top: 1.3rem;
+}
+
+.leaders-grid {
+  margin-top: 0.9rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.9rem;
+}
+
+.leader-card {
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  color: #dbe4f4;
+  padding: 0.96rem;
+  display: grid;
+  gap: 0.48rem;
+}
+
+.leader-photo {
+  width: min(52%, 188px);
+  min-width: 126px;
+  aspect-ratio: 1 / 1;
+  justify-self: center;
+  object-fit: cover;
+  object-position: center 24%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.34);
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.leader-role {
+  display: inline-flex;
+  justify-self: start;
+  align-items: center;
+  min-height: 1.72rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--line);
+  color: var(--text-soft);
+  font-size: 0.62rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  font-weight: 770;
+  padding: 0 0.58rem;
+}
+
+.leader-card h3 {
+  font-size: clamp(1.14rem, 2vw, 1.42rem);
+  line-height: 1.12;
+  color: var(--text);
+}
+
+.crew-unit {
+  padding-top: 1.24rem;
+}
+
+.crew-grid {
+  margin-top: 0.84rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.74rem;
+}
+
+.crew-card {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  padding: 0.92rem;
+  display: grid;
+  gap: 0.24rem;
+}
+
+.crew-card h3 {
+  font-size: 1.06rem;
+  color: var(--text);
+}
+
+.crew-card p {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+@media (max-width: 760px) {
+  .award-slab img {
+    min-height: 220px;
+    max-height: 320px;
+  }
+
+  .team-photo img {
+    max-height: 520px;
+  }
+}

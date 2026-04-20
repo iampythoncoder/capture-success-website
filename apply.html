@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Apply to join startup teams on Capture Success or submit your startup for execution support."
+      content="Apply to join startup teams on Capture Success or submit your startup."
     />
     <title>Apply | Capture Success</title>
     <link rel="icon" type="image/png" sizes="48x48" href="./favicon-48x48.png" />
@@ -14,12 +14,9 @@
     <link rel="manifest" href="./site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./base.css" />
-    <link rel="stylesheet" href="./apply.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./base.css?v=linear20260420n" />
+    <link rel="stylesheet" href="./apply.css?v=linear20260420n" />
   </head>
   <body>
     <div class="bg-orb orb-a" data-parallax="-0.05" aria-hidden="true"></div>
@@ -30,12 +27,13 @@
       <div class="container topbar-inner">
         <a class="brand" href="./index.html">
           <img class="brand-mark-img" src="./assets/logos/capture-mark.png" alt="" aria-hidden="true" />
-          <span class="brand-text">Capture Success</span>
+          <span class="brand-text">Capture <span class="brand-success">Success</span></span>
         </a>
 
         <nav class="nav-links" aria-label="Primary">
           <a href="./index.html">Home</a>
           <a href="./ideas.html">How It Works</a>
+          <a href="./teams.html">Teams</a>
           <a class="is-current" href="./apply.html">Apply</a>
         </nav>
 
@@ -50,19 +48,38 @@
           <div class="section-head" data-reveal>
             <p class="eyebrow">Application</p>
             <h1>Choose your path and apply in one form.</h1>
-            <p>Students can join startup teams. Founders can submit startups and recruit builders.</p>
+            <p>Students join teams. Founders submit startups. Same form.</p>
           </div>
         </div>
       </section>
 
       <section class="section form-section" id="apply-form">
         <div class="container form-shell" data-reveal>
+          <div class="application-highlights">
+            <article>
+              <p>Path Selection</p>
+              <strong>Student or founder mode</strong>
+            </article>
+            <article>
+              <p>Team Match</p>
+              <strong>Role fit + weekly availability</strong>
+            </article>
+            <article>
+              <p>Submission Flow</p>
+              <strong>Prefilled email draft</strong>
+            </article>
+          </div>
+
           <div class="mode-toggle" role="tablist" aria-label="Application mode">
             <button type="button" class="mode-btn is-active" data-mode="join">Join a Startup Team</button>
             <button type="button" class="mode-btn" data-mode="submit">Submit Your Startup</button>
           </div>
 
           <form id="capture-form" novalidate>
+            <div class="form-section-title">
+              <p>Core Details</p>
+              <h2>Basic applicant information</h2>
+            </div>
             <div class="form-grid two-col">
               <label>
                 Full Name
@@ -91,11 +108,15 @@
             </div>
 
             <div class="mode-fields" data-mode-panel="join">
+              <div class="form-section-title mode-title">
+                <p>Student Path</p>
+                <h2>Startup team contributor details</h2>
+              </div>
               <div class="form-grid two-col">
                 <label class="full-span">
                   Pool Placement
                   <div class="pool-entry" role="note">
-                    <p>You will be added to our contributor pool and matched with startup teams based on your skills and availability.</p>
+                    <p>You will be added to the contributor pool and matched by skills and availability.</p>
                     <input name="joinPool" type="hidden" value="Startup Team Contributor Pool" />
                   </div>
                 </label>
@@ -115,6 +136,10 @@
             </div>
 
             <div class="mode-fields is-hidden" data-mode-panel="submit">
+              <div class="form-section-title mode-title">
+                <p>Founder Path</p>
+                <h2>Startup submission details</h2>
+              </div>
               <div class="form-grid two-col">
                 <label>
                   Startup Name
@@ -142,7 +167,7 @@
                 </label>
                 <label class="full-span">
                   Build Plan
-                  <textarea name="ideaSummary" rows="4" placeholder="What are the next milestones and execution plan?"></textarea>
+                  <textarea name="ideaSummary" rows="4" placeholder="What are the next milestones and build plan?"></textarea>
                 </label>
               </div>
             </div>
