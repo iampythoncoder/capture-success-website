@@ -1,0 +1,638 @@
+.page {
+  --duke-navy: #012169;
+  --duke-royal: #00539b;
+  --duke-hatteras: #e2e6ed;
+  --accent: var(--duke-royal);
+  --accent-dark: var(--duke-navy);
+  --accent-soft: var(--duke-hatteras);
+  background: var(--paper);
+}
+
+.eyebrow {
+  color: var(--muted);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.hero {
+  overflow: hidden;
+  padding-block: clamp(7rem, 11vw, 10rem);
+  border-bottom: 1px solid var(--line);
+}
+
+.heroLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(25rem, 0.92fr);
+  gap: clamp(3rem, 8vw, 8rem);
+  align-items: center;
+}
+
+.heroCopy {
+  min-width: 0;
+}
+
+.dukeContext {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.dukeContext span {
+  padding: 0.5rem 0.72rem;
+  background: var(--duke-navy);
+  color: #ffffff;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.dukeContext p {
+  color: var(--duke-navy);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 10ch;
+  margin-top: 1.5rem;
+  font-size: clamp(4.6rem, 8vw, 8.2rem);
+  letter-spacing: -0.08em;
+  line-height: 0.88;
+  text-wrap: balance;
+}
+
+.intro {
+  max-width: 37rem;
+  margin-top: 2rem;
+  color: var(--ink-soft);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.6;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1.5rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.cohortCard {
+  overflow: hidden;
+  border: 1px solid var(--duke-navy);
+  border-radius: var(--radius-lg);
+  background: var(--paper);
+  box-shadow: 0 2rem 5rem rgba(11, 11, 11, 0.09);
+}
+
+.cohortBrand {
+  display: flex;
+  min-height: 5rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-inline: 1.5rem;
+  background: var(--duke-navy);
+  color: #ffffff;
+}
+
+.cohortBrand strong {
+  font-size: 1.45rem;
+  letter-spacing: -0.045em;
+}
+
+.cohortBrand span {
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.cohortCount {
+  display: grid;
+  min-height: 17rem;
+  grid-template-columns: auto 1fr;
+  gap: 1.5rem;
+  align-items: end;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.cohortCount > strong {
+  color: var(--duke-royal);
+  font-size: clamp(8rem, 13vw, 12rem);
+  letter-spacing: -0.1em;
+  line-height: 0.7;
+}
+
+.cohortCount > div {
+  padding-bottom: 0.2rem;
+}
+
+.cohortCount span {
+  color: var(--duke-navy);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.cohortCount p {
+  max-width: 10rem;
+  margin-top: 0.4rem;
+  color: var(--muted);
+  font-size: 0.74rem;
+  line-height: 1.45;
+}
+
+.cohortDetails {
+  margin: 0;
+  border-top: 1px solid var(--line);
+}
+
+.cohortDetails > div {
+  display: grid;
+  min-height: 4.8rem;
+  grid-template-columns: minmax(6rem, 0.6fr) minmax(0, 1.4fr);
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.cohortDetails dt,
+.programFacts dt {
+  color: var(--muted);
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.cohortDetails dd {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.cohortDetails dd > span {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.cohortFooter {
+  display: flex;
+  min-height: 4rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-inline: 1.5rem;
+  background: var(--duke-hatteras);
+}
+
+.cohortFooter > span {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: var(--duke-royal);
+}
+
+.cohortFooter p {
+  color: var(--duke-navy);
+  font-size: 0.61rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.overview {
+  padding-block: var(--section-space);
+}
+
+.overviewHeader,
+.sectionHeader {
+  display: grid;
+  grid-template-columns: minmax(0, 0.68fr) minmax(0, 1.32fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.overviewHeader > div,
+.sectionHeader > div {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.overviewHeader h2,
+.sectionHeader h2,
+.benefitsHeader h2,
+.showcaseCopy h2 {
+  max-width: 11ch;
+  font-size: clamp(3.5rem, 6vw, 6.4rem);
+  letter-spacing: -0.075em;
+  line-height: 0.9;
+  text-wrap: balance;
+}
+
+.overviewHeader > div > p,
+.sectionHeader > div > p {
+  max-width: 38rem;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.programFacts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: clamp(4rem, 8vw, 7rem) 0 0;
+  border-top: 1px solid var(--duke-navy);
+  border-bottom: 1px solid var(--line);
+}
+
+.programFacts > div {
+  min-height: 12rem;
+  padding: 1.5rem;
+  border-right: 1px solid var(--line);
+}
+
+.programFacts > div:last-child {
+  border-right: 0;
+}
+
+.programFacts dd {
+  max-width: 10ch;
+  margin: 4rem 0 0;
+  color: var(--duke-navy);
+  font-size: clamp(1.5rem, 2.4vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.schedule {
+  padding-block: var(--section-space);
+  background: var(--soft);
+  scroll-margin-top: 7rem;
+}
+
+.weekGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: clamp(4rem, 8vw, 7rem);
+  border-top: 1px solid var(--duke-navy);
+  border-left: 1px solid var(--line);
+}
+
+.weekCard {
+  min-height: 24rem;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.weekCard:last-child {
+  background: var(--duke-navy);
+  color: #ffffff;
+}
+
+.weekTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--muted);
+  font-size: 0.62rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.weekCard:last-child .weekTop {
+  color: var(--duke-hatteras);
+}
+
+.weekCard h3 {
+  max-width: 14ch;
+  margin-top: clamp(4rem, 7vw, 6rem);
+  color: var(--duke-navy);
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  letter-spacing: -0.065em;
+  line-height: 0.96;
+}
+
+.weekCard:last-child h3 {
+  color: #ffffff;
+}
+
+.topicList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.topicList li {
+  padding: 0.5rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink-soft);
+  font-size: 0.7rem;
+  line-height: 1.2;
+}
+
+.weekCard:last-child .topicList li {
+  border-color: var(--duke-hatteras);
+  color: #ffffff;
+}
+
+.benefits {
+  padding-block: var(--section-space);
+}
+
+.benefitsLayout {
+  display: grid;
+  grid-template-columns: minmax(18rem, 0.72fr) minmax(0, 1.28fr);
+  gap: clamp(3rem, 8vw, 8rem);
+  align-items: start;
+}
+
+.benefitsHeader {
+  position: sticky;
+  top: 8rem;
+}
+
+.benefitsHeader h2 {
+  margin-top: 1.5rem;
+}
+
+.benefitsHeader > p:last-child {
+  max-width: 28rem;
+  margin-top: 1.5rem;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.benefitList {
+  border-top: 1px solid var(--duke-navy);
+}
+
+.benefitRow {
+  display: grid;
+  grid-template-columns: 3rem minmax(10rem, 0.78fr) minmax(0, 1.22fr);
+  gap: 1.5rem;
+  align-items: baseline;
+  padding-block: 1.6rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.benefitRow > span {
+  color: var(--duke-royal);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+}
+
+.benefitRow h3 {
+  color: var(--duke-navy);
+  font-size: clamp(1.15rem, 1.7vw, 1.55rem);
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+}
+
+.benefitRow p {
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+
+.showcase {
+  padding-block: var(--section-space);
+  background: var(--duke-navy);
+  color: #ffffff;
+}
+
+.showcaseLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(24rem, 1.1fr);
+  gap: clamp(3rem, 8vw, 8rem);
+  align-items: center;
+}
+
+.showcase .eyebrow {
+  color: var(--duke-hatteras);
+}
+
+.showcaseCopy h2 {
+  margin-top: 1.5rem;
+}
+
+.showcaseCopy > p:last-child {
+  max-width: 32rem;
+  margin-top: 2rem;
+  color: var(--duke-hatteras);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.showcaseDiagram {
+  padding: 1rem;
+  border: 1px solid var(--duke-hatteras);
+}
+
+.stage {
+  display: flex;
+  min-height: 18rem;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  background: #ffffff;
+  color: var(--duke-navy);
+}
+
+.stage span {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.stage strong {
+  color: var(--duke-royal);
+  font-size: clamp(6rem, 10vw, 9rem);
+  letter-spacing: -0.09em;
+  line-height: 0.72;
+}
+
+.audience {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 1px;
+  background: var(--duke-hatteras);
+}
+
+.audience span {
+  display: grid;
+  min-height: 5rem;
+  place-items: center;
+  background: var(--duke-royal);
+  color: #ffffff;
+  font-size: 0.64rem;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.registration {
+  padding-block: var(--section-space);
+}
+
+.registration :global(.cta) {
+  background: var(--duke-navy);
+}
+
+.registration :global(.cta .eyebrow),
+.registration :global(.cta-body) {
+  color: var(--duke-hatteras);
+}
+
+.registration :global(.button-inverse:hover) {
+  background: var(--duke-royal);
+}
+
+@media (max-width: 960px) {
+  .heroLayout,
+  .showcaseLayout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .heroCopy {
+    max-width: 52rem;
+  }
+
+  .cohortCard {
+    width: 88%;
+    margin-left: 12%;
+  }
+
+  .benefitsLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .benefitsHeader {
+    position: static;
+    max-width: 44rem;
+  }
+
+  .showcaseDiagram {
+    width: 88%;
+    margin-left: 12%;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero {
+    padding-block: 5.5rem 5rem;
+  }
+
+  .dukeContext {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.55rem, 14.5vw, 5rem);
+  }
+
+  .cohortCard,
+  .showcaseDiagram {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .cohortCount {
+    min-height: 14rem;
+  }
+
+  .cohortCount > strong {
+    font-size: 8rem;
+  }
+
+  .cohortDetails > div {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+
+  .overviewHeader,
+  .sectionHeader {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .overviewHeader h2,
+  .sectionHeader h2,
+  .benefitsHeader h2,
+  .showcaseCopy h2 {
+    font-size: clamp(3.1rem, 13vw, 4.5rem);
+  }
+
+  .programFacts {
+    display: flex;
+    width: calc(100% + var(--gutter));
+    overflow-x: auto;
+    padding-right: var(--gutter);
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .programFacts::-webkit-scrollbar {
+    display: none;
+  }
+
+  .programFacts > div {
+    width: 68vw;
+    min-height: 11rem;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+
+  .weekGrid {
+    display: flex;
+    width: calc(100% + var(--gutter));
+    gap: 0.75rem;
+    overflow-x: auto;
+    padding-right: var(--gutter);
+    border: 0;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .weekGrid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .weekCard {
+    width: 82vw;
+    min-height: 28rem;
+    flex: 0 0 auto;
+    border: 1px solid var(--line);
+    scroll-snap-align: start;
+  }
+
+  .benefitRow {
+    grid-template-columns: 2rem 1fr;
+    gap: 0.8rem 1rem;
+  }
+
+  .benefitRow p {
+    grid-column: 2;
+  }
+
+  .stage {
+    min-height: 14rem;
+  }
+}

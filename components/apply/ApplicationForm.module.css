@@ -1,0 +1,357 @@
+.formSection {
+  padding-block: clamp(4rem, 8vw, 8rem);
+  background: var(--soft);
+}
+
+.formLayout {
+  display: grid;
+  grid-template-columns: minmax(17rem, 0.62fr) minmax(0, 1.38fr);
+  gap: clamp(2rem, 6vw, 6rem);
+  align-items: start;
+}
+
+.applicationRail {
+  position: sticky;
+  top: 7.5rem;
+}
+
+.intentPicker {
+  min-width: 0;
+  padding: 0;
+  border: 0;
+}
+
+.intentPicker legend,
+.draftSteps > p {
+  margin-bottom: 1rem;
+  color: var(--muted);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.intentOptions {
+  display: grid;
+  border-top: 1px solid var(--line-strong);
+}
+
+.intentOption {
+  position: relative;
+  display: grid;
+  min-height: 6.5rem;
+  align-content: center;
+  gap: 0.25rem;
+  padding: 1rem 2.5rem 1rem 1rem;
+  border-bottom: 1px solid var(--line);
+  cursor: pointer;
+  transition:
+    background 180ms ease,
+    color 180ms ease;
+}
+
+.intentOption::after {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  width: 0.6rem;
+  height: 0.6rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  content: "";
+  transform: translateY(-50%);
+}
+
+.intentOption:has(input:focus-visible) {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.intentOptionActive {
+  background: var(--ink);
+  color: #ffffff;
+}
+
+.intentOptionActive::after {
+  border-color: #ffffff;
+  background: var(--accent);
+  box-shadow: 0 0 0 0.2rem var(--ink), 0 0 0 0.25rem #ffffff;
+}
+
+.intentOption input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.intentOption span {
+  color: var(--muted);
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.intentOptionActive span {
+  color: #989898;
+}
+
+.intentOption b {
+  font-size: 0.92rem;
+}
+
+.draftSteps {
+  margin-top: 3.5rem;
+}
+
+.draftSteps ol {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.draftSteps li {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  align-items: center;
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+}
+
+.draftSteps li span {
+  color: var(--faint);
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+}
+
+.formPanel {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--paper);
+}
+
+.formHeader {
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border-bottom: 1px solid var(--line);
+}
+
+.formHeader > p {
+  color: var(--muted);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.formHeader h2 {
+  max-width: 15ch;
+  margin-top: 1rem;
+  font-size: clamp(2.5rem, 5vw, 4.8rem);
+  letter-spacing: -0.065em;
+  line-height: 0.95;
+}
+
+.formHeader > span {
+  display: block;
+  max-width: 37rem;
+  margin-top: 1.1rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.fieldGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+}
+
+.dynamicFields {
+  display: contents;
+}
+
+.field {
+  min-width: 0;
+  padding: 1.25rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.field:nth-child(odd):not(.fieldWide) {
+  border-right: 1px solid var(--line);
+}
+
+.fieldWide {
+  grid-column: 1 / -1;
+}
+
+.field label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.65rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.field label small {
+  color: var(--faint);
+  font-size: 0.55rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--ink);
+  font-size: 0.9rem;
+}
+
+.field textarea {
+  min-height: 9rem;
+  resize: vertical;
+  line-height: 1.55;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #9a9a96;
+}
+
+.field input:focus,
+.field textarea:focus {
+  box-shadow: inset 0 -2px 0 var(--accent);
+}
+
+.submitRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.5rem;
+}
+
+.submitRow > div {
+  min-height: 2.6rem;
+}
+
+.submitRow p {
+  color: var(--ink-soft);
+  font-size: 0.74rem;
+}
+
+.submitRow div > span {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--muted);
+  font-size: 0.68rem;
+}
+
+.submitButton {
+  display: inline-flex;
+  min-height: 3.25rem;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem 0.75rem 1.25rem;
+  border-radius: 999px;
+  background: var(--ink);
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 600;
+  transition:
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.submitButton:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+}
+
+.submitButton svg {
+  width: 1rem;
+  height: 1rem;
+  stroke-width: 1.6;
+}
+
+@media (max-width: 960px) {
+  .formLayout {
+    grid-template-columns: minmax(15rem, 0.72fr) minmax(0, 1.28fr);
+    gap: 2rem;
+  }
+
+  .fieldGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .field,
+  .field:nth-child(odd):not(.fieldWide) {
+    grid-column: 1;
+    border-right: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .formLayout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .applicationRail {
+    position: static;
+    min-width: 0;
+  }
+
+  .intentOptions {
+    display: flex;
+    width: calc(100% + var(--gutter));
+    gap: 0.75rem;
+    overflow-x: auto;
+    padding-right: var(--gutter);
+    border-top: 0;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .intentOptions::-webkit-scrollbar {
+    display: none;
+  }
+
+  .intentOption {
+    width: 74vw;
+    min-height: 7.5rem;
+    flex: 0 0 auto;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    background: var(--paper);
+    scroll-snap-align: start;
+  }
+
+  .intentOptionActive {
+    background: var(--ink);
+  }
+
+  .draftSteps {
+    display: none;
+  }
+
+  .formPanel {
+    border-radius: var(--radius-md);
+  }
+
+  .submitRow {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .submitButton {
+    width: 100%;
+  }
+}
