@@ -16,6 +16,7 @@ export const navItems = [
   { href: "/#mission", label: "Mission" },
   { href: "/#portfolio", label: "Companies" },
   { href: "/#team", label: "Team" },
+  { href: "/board", label: "Board" },
   { href: "/#metrics", label: "Metrics" },
   { href: "/accelerator", label: "Accelerator" },
   { href: "/#contact", label: "Apply" }

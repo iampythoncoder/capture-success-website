@@ -26,7 +26,7 @@ export function Header({ showApplyCta = true, currentHref }: HeaderProps) {
           <span>Capture Success</span>
         </Link>
 
-        <nav className="section-tabs" aria-label="Page sections">
+        <nav className="section-tabs" aria-label="Primary navigation">
           {navItems.map((item) => (
             <Link
               key={item.href}
