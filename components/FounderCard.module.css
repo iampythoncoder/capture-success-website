@@ -48,6 +48,15 @@
   text-transform: uppercase;
 }
 
+.meta p {
+  color: var(--ink);
+  font-size: clamp(0.72rem, 0.9vw, 0.8rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1.35;
+  text-align: right;
+}
+
 .monogram {
   position: relative;
   z-index: 1;
@@ -88,6 +97,10 @@
 .card[data-tone="dark"] .meta {
   border-color: #303030;
   color: #8f8f8f;
+}
+
+.card[data-tone="dark"] .meta p {
+  color: #f4f4f4;
 }
 
 .card[data-tone="dark"] .monogram {

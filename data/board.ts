@@ -1,17 +1,18 @@
 export type BoardPerson = {
   name: string;
-  role: "Co-founder" | "Board member";
+  role: string;
 };
 
 export const coFounders: readonly BoardPerson[] = [
-  { name: "Saatvik Santosh", role: "Co-founder" },
-  { name: "Dhruva Valluru", role: "Co-founder" },
-  { name: "Amogh Gotaparthy", role: "Co-founder" },
-  { name: "Dhruv Mishra", role: "Co-founder" },
-  { name: "Ketav Karthikeyan", role: "Co-founder" }
+  { name: "Saatvik Santosh", role: "Technology Director" },
+  { name: "Dhruva Valluru", role: "Operations Director" },
+  { name: "Amogh Gotaparthy", role: "Outreach Director" },
+  { name: "Dhruv Mishra", role: "Partnerships Director" },
+  { name: "Ketav Karthikeyan", role: "Summer Camp Director" }
 ] as const;
 
 export const boardMembers: readonly BoardPerson[] = [
-  { name: "Rohit Guntiri", role: "Board member" },
-  { name: "Sonith Das", role: "Board member" }
+  { name: "Rohit Gunturi", role: "Social Media Manager" },
+  { name: "Sonith Das", role: "Social Events Organizer" },
+  { name: "Aaryan Mahalingam", role: "Strategic Initiatives Director" }
 ] as const;

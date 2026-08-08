@@ -10,7 +10,7 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: "Board — Capture Success",
   description:
-    "Meet the five co-founders and two board members behind Capture Success."
+    "Meet the five co-founders and three board members behind Capture Success."
 };
 
 export default function BoardPage() {
@@ -26,20 +26,20 @@ export default function BoardPage() {
                 Board
               </p>
               <h1 id="board-heading">The people behind Capture Success.</h1>
-              <p className={styles.intro}>Five co-founders. Two board members.</p>
+              <p className={styles.intro}>Five co-founders. Three board members.</p>
             </div>
 
             <aside
               className={styles.governanceCard}
               data-reveal
-              aria-label="Capture Success has five co-founders and two board members"
+              aria-label="Capture Success has five co-founders and three board members"
             >
               <div className={styles.governanceTop}>
                 <span>Capture Success</span>
                 <span>Board · 2026</span>
               </div>
               <div className={styles.total}>
-                <strong>07</strong>
+                <strong>08</strong>
                 <p>People</p>
               </div>
               <dl className={styles.counts}>
@@ -49,7 +49,7 @@ export default function BoardPage() {
                 </div>
                 <div>
                   <dt>Board members</dt>
-                  <dd>02</dd>
+                  <dd>03</dd>
                 </div>
               </dl>
             </aside>
@@ -79,6 +79,7 @@ export default function BoardPage() {
                   key={person.name}
                   name={person.name}
                   role={person.role}
+                  category="cofounder"
                 />
               ))}
             </ol>
@@ -94,7 +95,7 @@ export default function BoardPage() {
             </div>
             <header className={styles.sectionHeader} data-reveal>
               <h2 id="members-heading">Board members</h2>
-              <p>Two members serve on the board.</p>
+              <p>Three members serve on the board.</p>
             </header>
             <ol
               className={styles.boardGrid}
@@ -108,6 +109,7 @@ export default function BoardPage() {
                   key={person.name}
                   name={person.name}
                   role={person.role}
+                  category="board-member"
                   tone="dark"
                 />
               ))}

@@ -11,7 +11,7 @@ export function Metrics() {
   return (
     <Section
       id="metrics"
-      index="04"
+      index="03"
       label="Metrics"
       title="The network so far."
       className="metrics-section"

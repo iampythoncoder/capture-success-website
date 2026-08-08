@@ -10,12 +10,19 @@ export type Startup = {
   website: string;
   logo: string;
   visual: StartupVisual;
+  milestone?: {
+    displayResult: string;
+    result: string;
+    event: string;
+    image: string;
+    imageAlt: string;
+  };
 };
 
 export const navItems = [
   { href: "/#mission", label: "Mission" },
   { href: "/#portfolio", label: "Companies" },
-  { href: "/#team", label: "Team" },
+  { href: "/finnovate", label: "Finnovate" },
   { href: "/board", label: "Board" },
   { href: "/#metrics", label: "Metrics" },
   { href: "/accelerator", label: "Accelerator" },
@@ -47,7 +54,14 @@ export const startups: readonly Startup[] = [
     founders: ["Vivaan", "Ganesh", "Sid"],
     website: "https://visiocourt.com/",
     logo: "/portfolio/visiocourt-mark.webp",
-    visual: "court"
+    visual: "court",
+    milestone: {
+      displayResult: "2nd",
+      result: "Second place",
+      event: "DECA States",
+      image: "/media/visiocourt-team.webp",
+      imageAlt: "The VisioCourt founders holding their second-place award at DECA States."
+    }
   }
 ] as const;
 
@@ -55,7 +69,11 @@ export const additionalStartups = [
   "PathLight",
   "Beacon",
   "Palm",
-  "Knowledge Vault"
+  "Knowledge Vault",
+  "Hemma",
+  "Revivo",
+  "RoboGripper",
+  "Resyn."
 ] as const;
 
 export const contactRoutes = [

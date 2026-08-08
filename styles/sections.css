@@ -316,14 +316,18 @@ html[data-motion-ready="true"] .network-snapshot[data-reveal].is-visible {
   line-height: 1;
 }
 
-.team-layout {
+.portfolio-milestones {
+  margin-top: clamp(3rem, 6vw, 5rem);
+}
+
+.company-milestone {
   display: grid;
   grid-template-columns: minmax(0, 1.28fr) minmax(19rem, 0.72fr);
   gap: 1rem;
   align-items: stretch;
 }
 
-.team-photo {
+.company-milestone-photo {
   position: relative;
   aspect-ratio: 4 / 3;
   overflow: hidden;
@@ -331,12 +335,12 @@ html[data-motion-ready="true"] .network-snapshot[data-reveal].is-visible {
   background: var(--ink);
 }
 
-.team-photo img {
+.company-milestone-photo img {
   object-fit: cover;
   object-position: 50% 38%;
 }
 
-.team-photo figcaption {
+.company-milestone-photo figcaption {
   position: absolute;
   right: 1rem;
   bottom: 1rem;
@@ -354,7 +358,7 @@ html[data-motion-ready="true"] .network-snapshot[data-reveal].is-visible {
   text-transform: uppercase;
 }
 
-.team-result {
+.company-milestone-result {
   display: flex;
   overflow: hidden;
   flex-direction: column;
@@ -365,15 +369,15 @@ html[data-motion-ready="true"] .network-snapshot[data-reveal].is-visible {
   color: #ffffff;
 }
 
-.team-result > div > p,
-.team-result dt {
+.company-milestone-result > div > p,
+.company-milestone-result dt {
   color: #8b8b8b;
   font-size: 0.58rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
-.team-result strong {
+.company-milestone-result strong {
   display: block;
   margin-top: 1.5rem;
   color: var(--accent);
@@ -382,26 +386,26 @@ html[data-motion-ready="true"] .network-snapshot[data-reveal].is-visible {
   line-height: 0.72;
 }
 
-.team-result h3 {
+.company-milestone-result h3 {
   margin-top: 1.2rem;
   font-size: clamp(2rem, 3vw, 3rem);
   letter-spacing: -0.055em;
   line-height: 1;
 }
 
-.team-result dl {
+.company-milestone-result dl {
   margin: 4rem 0 0;
   border-top: 1px solid #2f2f2f;
 }
 
-.team-result dl > div {
+.company-milestone-result dl > div {
   display: grid;
   gap: 0.45rem;
   padding-block: 1rem;
   border-bottom: 1px solid #2f2f2f;
 }
 
-.team-result dd {
+.company-milestone-result dd {
   margin: 0;
   color: #ffffff;
   font-size: 0.78rem;

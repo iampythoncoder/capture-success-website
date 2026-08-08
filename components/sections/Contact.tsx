@@ -15,7 +15,7 @@ export function Contact() {
   return (
     <Section
       id="contact"
-      index="05"
+      index="04"
       label="Applications"
       title="Choose your path."
       intro="Submit a startup, join a team, or start a partnership conversation."

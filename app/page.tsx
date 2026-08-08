@@ -5,7 +5,6 @@ import { Hero } from "@/components/sections/Hero";
 import { Metrics } from "@/components/sections/Metrics";
 import { Mission } from "@/components/sections/Mission";
 import { Portfolio } from "@/components/sections/Portfolio";
-import { Team } from "@/components/sections/Team";
 
 export default function HomePage() {
   return (
@@ -15,7 +14,6 @@ export default function HomePage() {
         <Hero />
         <Mission />
         <Portfolio />
-        <Team />
         <Metrics />
         <Contact />
       </main>

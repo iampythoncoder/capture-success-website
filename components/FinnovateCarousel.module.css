@@ -1,0 +1,153 @@
+.carousel {
+  width: min(100%, 70rem);
+  margin-inline: auto;
+}
+
+.viewport {
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  touch-action: pan-y;
+}
+
+.track {
+  display: flex;
+  width: 100%;
+  will-change: transform;
+}
+
+.track.animate {
+  transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.slide {
+  min-width: 0;
+  flex: 0 0 100%;
+}
+
+.photoCard {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--paper);
+}
+
+.photoCard img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+
+.photoCard figcaption {
+  display: flex;
+  min-height: 4rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-inline: 1.25rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.61rem;
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.photoCard figcaption span:last-child {
+  text-align: right;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+}
+
+.controls > p {
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  color: var(--faint);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+}
+
+.controls > p strong {
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+.controls > div {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.controls button {
+  display: grid;
+  width: 2.9rem;
+  height: 2.9rem;
+  padding: 0;
+  place-items: center;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--ink);
+  cursor: pointer;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.controls button svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  stroke-width: 1.8;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .controls button:hover {
+    border-color: var(--dark);
+    background: var(--dark);
+    color: #ffffff;
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 720px) {
+  .viewport,
+  .photoCard {
+    border-radius: var(--radius-sm);
+  }
+
+  .photoCard figcaption {
+    min-height: 4.5rem;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.15rem;
+    padding: 0.85rem 1rem;
+  }
+
+  .photoCard figcaption span:last-child {
+    text-align: left;
+  }
+
+  .controls button {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track.animate {
+    transition-duration: 0.01ms;
+  }
+}

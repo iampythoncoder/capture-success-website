@@ -364,27 +364,27 @@
     width: 100%;
   }
 
-  .team-layout {
+  .company-milestone {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
 
-  .team-photo {
+  .company-milestone-photo {
     aspect-ratio: 3 / 4;
   }
 
-  .team-photo img {
+  .company-milestone-photo img {
     object-position: 50% 40%;
   }
 
-  .team-photo figcaption {
+  .company-milestone-photo figcaption {
     right: 0.7rem;
     bottom: 0.7rem;
     left: 0.7rem;
   }
 
-  .team-result {
-    min-height: 30rem;
+  .company-milestone-result {
+    min-height: 26rem;
   }
 
   .metrics-grid {

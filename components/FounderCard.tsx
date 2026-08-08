@@ -3,7 +3,8 @@ import styles from "./FounderCard.module.css";
 type FounderCardProps = {
   index: number;
   name: string;
-  role: "Co-founder" | "Board member";
+  role: string;
+  category: "cofounder" | "board-member";
   tone?: "light" | "dark";
 };
 
@@ -18,6 +19,7 @@ export function FounderCard({
   index,
   name,
   role,
+  category,
   tone = "light"
 }: FounderCardProps) {
   return (
@@ -25,7 +27,7 @@ export function FounderCard({
       className={styles.card}
       data-tone={tone}
       data-reveal
-      data-person-role={role === "Co-founder" ? "cofounder" : "board-member"}
+      data-person-role={category}
     >
       <div className={styles.meta}>
         <span>{String(index).padStart(2, "0")}</span>

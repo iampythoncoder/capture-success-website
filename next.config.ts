@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
     return [
       { source: "/index.html", destination: "/", permanent: true },
       { source: "/ideas.html", destination: "/#mission", permanent: true },
-      { source: "/teams.html", destination: "/#team", permanent: true },
+      { source: "/teams.html", destination: "/#portfolio", permanent: true },
       { source: "/showcase.html", destination: "/#portfolio", permanent: true },
       { source: "/apply.html", destination: "/apply", permanent: true }
     ];
