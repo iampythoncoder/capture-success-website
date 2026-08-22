@@ -14,7 +14,7 @@ const geist = Geist({
 export const metadata: Metadata = {
   title: "Capture Success — 10+ student-led startups",
   description:
-    "Capture Success is a network of 10+ student-led companies that has raised more than $20,000. Explore PyroSight, VisioCourt, and ways to join.",
+    "Capture Success partners with NC State to connect student founders with business, entrepreneurship, mentorship, and venture-building opportunities.",
   applicationName: "Capture Success",
   icons: {
     icon: "/brand/capture-mark.png",

@@ -73,6 +73,20 @@
     margin-left: 12%;
   }
 
+  .partnership-card {
+    grid-template-columns: minmax(8rem, 0.4fr) minmax(0, 1.6fr);
+    gap: 0 clamp(1.5rem, 3vw, 2.5rem);
+  }
+
+  .partnership-identity {
+    grid-row: 1 / span 2;
+  }
+
+  .partnership-card > .button {
+    grid-column: 2;
+    justify-self: start;
+  }
+
   .mission-layout {
     grid-template-columns: minmax(0, 1.1fr) minmax(17rem, 0.9fr);
     gap: 2rem;
@@ -219,6 +233,42 @@
     width: 104%;
     margin-left: 6%;
     border-radius: 1.2rem 0 0 1.2rem;
+  }
+
+  .partnership {
+    padding-block: 0.75rem;
+  }
+
+  .partnership-card {
+    min-height: 0;
+    grid-template-columns: 1fr;
+    gap: 1.15rem;
+    padding: 1.25rem;
+    border-radius: var(--radius-md);
+  }
+
+  .partnership-identity {
+    min-height: 0;
+    grid-row: auto;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    align-items: center;
+    padding: 0 0 1rem;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .partnership-identity img {
+    width: 7rem;
+  }
+
+  .partnership-copy h2 {
+    font-size: clamp(1.8rem, 9vw, 2.3rem);
+  }
+
+  .partnership-card > .button {
+    grid-column: 1;
+    justify-self: start;
   }
 
   html[data-motion-ready="true"] .network-snapshot[data-reveal] {

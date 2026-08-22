@@ -207,6 +207,54 @@
   text-transform: uppercase;
 }
 
+.partnerRail {
+  padding-block: 1rem;
+  border-bottom: 1px solid var(--line);
+  background: var(--soft);
+}
+
+.partnerRailInner {
+  display: grid;
+  min-height: 6.75rem;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: center;
+}
+
+.partnerRailIdentity {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-right: clamp(1.5rem, 3vw, 3rem);
+  border-right: 1px solid var(--line);
+}
+
+.partnerRailIdentity p {
+  max-width: 6.5rem;
+  color: var(--muted);
+  font-size: 0.61rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.partnerRailIdentity img {
+  width: 8rem;
+  height: auto;
+}
+
+.partnerRailCopy {
+  max-width: 40rem;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.partnerRailLink {
+  justify-self: end;
+}
+
 .overview {
   padding-block: var(--section-space);
 }
@@ -565,6 +613,36 @@
   .cohortDetails > div {
     grid-template-columns: 1fr;
     gap: 0.35rem;
+  }
+
+  .partnerRail {
+    padding-block: 0;
+  }
+
+  .partnerRailInner {
+    min-height: 0;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding-block: 1.25rem;
+  }
+
+  .partnerRailIdentity {
+    justify-content: space-between;
+    padding: 0 0 1rem;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .partnerRailIdentity p {
+    max-width: none;
+  }
+
+  .partnerRailIdentity img {
+    width: 7rem;
+  }
+
+  .partnerRailLink {
+    justify-self: start;
   }
 
   .overviewHeader,

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import type { ReactNode } from "react";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -136,6 +137,34 @@ export default function AcceleratorPage() {
             </aside>
           </Container>
         </section>
+
+        <aside className={styles.partnerRail} aria-label="NC State university partnership">
+          <Container className={styles.partnerRailInner}>
+            <div className={styles.partnerRailIdentity} data-reveal>
+              <p>Capture Success partner</p>
+              <Image
+                src="/partners/nc-state-brick.png"
+                alt="NC State University"
+                width={540}
+                height={260}
+                sizes="(max-width: 720px) 112px, 128px"
+              />
+            </div>
+            <p className={styles.partnerRailCopy} data-reveal>
+              Capture Success partners with NC State to support student founders through business
+              education and entrepreneurship.
+            </p>
+            <Button
+              className={styles.partnerRailLink}
+              href="https://entrepreneurship.ncsu.edu/"
+              variant="text"
+              external
+              ariaLabel="Explore NC State Innovation and Entrepreneurship (opens in a new tab)"
+            >
+              Explore entrepreneurship
+            </Button>
+          </Container>
+        </aside>
 
         <section className={styles.overview} aria-labelledby="overview-heading">
           <Container>

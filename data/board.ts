@@ -13,6 +13,6 @@ export const coFounders: readonly BoardPerson[] = [
 
 export const boardMembers: readonly BoardPerson[] = [
   { name: "Rohit Gunturi", role: "Social Media Manager" },
-  { name: "Sonith Das", role: "Social Events Organizer" },
-  { name: "Aaryan Mahalingam", role: "Strategic Initiatives Director" }
+  { name: "Neeraj Sivasankar", role: "Board Member" },
+  { name: "Aryan Mahalingam", role: "Strategic Initiatives Director" }
 ] as const;
