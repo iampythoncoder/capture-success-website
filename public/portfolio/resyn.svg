@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="44" fill="#152A20"/>
+  <g transform="translate(66,14) scale(0.9)">
+    <rect x="33" y="2" width="20" height="14" rx="2.5" fill="rgba(255,255,255,0.30)" stroke="rgba(255,255,255,0.65)" stroke-width="1.6"/>
+    <line x1="33" y1="9" x2="53" y2="9" stroke="rgba(255,255,255,0.45)" stroke-width="1.2"/>
+    <line x1="33" y1="13" x2="53" y2="13" stroke="rgba(255,255,255,0.45)" stroke-width="1.2"/>
+    <path d="M36 16 L36 26 L30 38 L30 46 L56 46 L56 38 L50 26 L50 16 Z" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.65)" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M30 46 C24 52 20 60 20 70 L20 168 C20 175 25 181 32 181 L54 181 C61 181 66 175 66 168 L66 70 C66 60 62 52 56 46 Z" fill="rgba(255,255,255,0.10)" stroke="rgba(255,255,255,0.7)" stroke-width="2.2" stroke-linejoin="round"/>
+    <rect x="20" y="94" width="46" height="46" fill="rgba(232,163,61,0.22)" stroke="rgba(232,163,61,0.85)" stroke-width="1.6"/>
+    <line x1="20" y1="106" x2="66" y2="106" stroke="rgba(232,163,61,0.55)" stroke-width="1.2"/>
+    <line x1="20" y1="128" x2="66" y2="128" stroke="rgba(232,163,61,0.55)" stroke-width="1.2"/>
+    <path d="M27 58 C24 68 24 150 27 170" stroke="rgba(255,255,255,0.4)" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>
