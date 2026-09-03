@@ -1,3 +1,5 @@
+Built Using Vik Beta -01
+
 # Capture Success
 
 Product-quality portfolio site for Capture Success, built with the Next.js App Router and TypeScript.
