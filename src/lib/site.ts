@@ -506,6 +506,13 @@ export const PARTNERS: Partner[] = [
     role: "Community partner",
   },
   {
+    name: "SKEMA Business School — Raleigh campus",
+    short: "SKEMA",
+    logo: "/partners/skema.svg",
+    href: "https://www.skema.edu/",
+    role: "Business school partner",
+  },
+  {
     name: "NC State Entrepreneurship",
     short: "NC State",
     logo: "/partners/nc-state.png",
