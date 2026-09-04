@@ -395,7 +395,7 @@ export type Person = {
 
 /** The whole board as one list — no separation. */
 export const PEOPLE: Person[] = [
-  { name: "Neeraj Sivashankar", role: "Co-Chief Executive Officer" },
+  { name: "Neeraj Sivashankar", role: "Co-Chief Executive Officer", founder: true },
   { name: "Dhruv Mishra", role: "Co-Chief Executive Officer", founder: true },
   { name: "Saatvik Santosh", role: "Chief Technology Officer", founder: true },
   { name: "Ketav Karthikeyan", role: "Chief Marketing Officer", founder: true },
@@ -591,6 +591,6 @@ export const NAV = [
   { href: "/accelerator", label: "Accelerator" },
   { href: "/companies", label: "Companies" },
   { href: "/finnovate", label: "Finnovate" },
-  { href: "/board", label: "Board" },
+  { href: "/about", label: "About" },
   { href: "/apply", label: "Apply" },
 ] as const;
