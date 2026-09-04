@@ -459,6 +459,13 @@ export type Partner = {
 /** Ecosystem partners for the Fall 2026 accelerator. */
 export const PARTNERS: Partner[] = [
   {
+    name: "Hub RTP — Research Triangle Park's downtown",
+    short: "Hub RTP",
+    logo: "/partners/hub-rtp.png",
+    href: "https://hub.rtp.org/",
+    role: "Venue sponsor",
+  },
+  {
     name: "The University of North Carolina at Chapel Hill",
     short: "UNC-Chapel Hill",
     logo: "/partners/unc.png",
