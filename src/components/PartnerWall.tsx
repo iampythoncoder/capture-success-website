@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { PARTNERS, PARTNER_ROLES, SIGNAGE_PARTNER, type Partner } from "@/lib/site";
+import { PARTNERS, PARTNER_ROLES, type Partner } from "@/lib/site";
 
 /** Square-format logos render as squares instead of being squeezed wide. */
 const SQUARE_LOGOS = new Set(["/partners/rdsco.png"]);
@@ -103,9 +103,6 @@ export default function PartnerWall({
         })}
       </div>
 
-      <p className="soft mt-4 text-[14px]">
-        Signage partner — {SIGNAGE_PARTNER.name}, {SIGNAGE_PARTNER.location}
-      </p>
     </div>
   );
 }

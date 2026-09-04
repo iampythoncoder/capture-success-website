@@ -513,6 +513,13 @@ export const PARTNERS: Partner[] = [
     role: "Business school partner",
   },
   {
+    name: "Jack Rabbit Signs — Raleigh, NC",
+    short: "Jack Rabbit Signs",
+    logo: "/partners/jack-rabbit-signs.jpg",
+    href: "https://www.jackrabbitsigns.net/",
+    role: "Signage partner",
+  },
+  {
     name: "NC State Entrepreneurship",
     short: "NC State",
     logo: "/partners/nc-state.png",
@@ -520,12 +527,6 @@ export const PARTNERS: Partner[] = [
     role: "Ecosystem partner",
   },
 ];
-
-export const SIGNAGE_PARTNER = {
-  name: "Jack Rabbit Signs",
-  location: "Raleigh, NC",
-  role: "Signage partner",
-};
 
 /** What partners actually do in the program. */
 export const PARTNER_ROLES = ["Mentors", "Speakers", "Judges", "Sponsors"];
