@@ -466,6 +466,20 @@ export const PARTNERS: Partner[] = [
     role: "Venue sponsor",
   },
   {
+    name: "Frontier RTP — Building 600",
+    short: "Frontier RTP",
+    logo: "/partners/frontier-rtp.png",
+    href: "https://frontier.rtp.org/",
+    role: "Venue partner",
+  },
+  {
+    name: "Jason's Deli",
+    short: "Jason's Deli",
+    logo: "/partners/jasons-deli.png",
+    href: "https://www.jasonsdeli.com/",
+    role: "Catering partner",
+  },
+  {
     name: "The University of North Carolina at Chapel Hill",
     short: "UNC-Chapel Hill",
     logo: "/partners/unc.png",
