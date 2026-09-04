@@ -387,21 +387,23 @@ export const METRICS = [
 // People
 // ---------------------------------------------------------------------------
 
-export type Person = { n: string; name: string; role: string };
+export type Person = {
+  name: string;
+  role: string;
+  founder?: boolean;
+};
 
-export const COFOUNDERS: Person[] = [
-  { n: "01", name: "Saatvik Santosh", role: "Technology Director" },
-  { n: "02", name: "Dhruva Valluru", role: "Operations Director" },
-  { n: "03", name: "Amogh Gotaparthy", role: "Outreach Director" },
-  { n: "04", name: "Dhruv Mishra", role: "Partnerships Director" },
-  { n: "05", name: "Ketav Karthikeyan", role: "Summer Camp Director" },
-];
-
-export const BOARD: Person[] = [
-  { n: "06", name: "Rohit Gunturi", role: "Social Media Manager" },
-  { n: "07", name: "Neeraj Sivasankar", role: "Board Member" },
-  { n: "08", name: "Aryan Mahalingam", role: "Strategic Initiatives Director" },
-  { n: "09", name: "Vihaan Kommireddy", role: "Board Member" },
+/** The whole board as one list — no separation. */
+export const PEOPLE: Person[] = [
+  { name: "Neeraj Sivasankar", role: "Chief Executive Officer" },
+  { name: "Saatvik Santosh", role: "Chief Technology Officer", founder: true },
+  { name: "Dhruv Mishra", role: "Chief Financial Officer", founder: true },
+  { name: "Ketav Karthikeyan", role: "Chief Marketing Officer", founder: true },
+  { name: "Dhruva Valluru", role: "Co-Chief Operating Officer", founder: true },
+  { name: "Amogh Gotaparthy", role: "Co-Chief Operating Officer", founder: true },
+  { name: "Rohit Gunturi", role: "Chief Communications Officer" },
+  { name: "Aryan Mahalingam", role: "Chief Strategy Officer" },
+  { name: "Vihaan Kommireddy", role: "Chief Product Officer" },
 ];
 
 // ---------------------------------------------------------------------------
@@ -589,5 +591,6 @@ export const NAV = [
   { href: "/accelerator", label: "Accelerator" },
   { href: "/companies", label: "Companies" },
   { href: "/finnovate", label: "Finnovate" },
+  { href: "/board", label: "Board" },
   { href: "/apply", label: "Apply" },
 ] as const;
