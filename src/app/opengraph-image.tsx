@@ -59,8 +59,8 @@ export default function OG() {
             <div style={{ opacity: 0.7 }}>student companies</div>
           </div>
           <div style={{ display: "flex", flexDirection: "column" }}>
-            <div style={{ fontWeight: 800, fontSize: 40, color: "#69b5ff" }}>$20K+</div>
-            <div style={{ opacity: 0.7 }}>raised</div>
+            <div style={{ fontWeight: 800, fontSize: 40, color: "#69b5ff" }}>12</div>
+            <div style={{ opacity: 0.7 }}>Triangle partners</div>
           </div>
           <div style={{ display: "flex", flexDirection: "column" }}>
             <div style={{ fontWeight: 800, fontSize: 40, color: "#69b5ff" }}>6 weeks</div>

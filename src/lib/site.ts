@@ -378,7 +378,6 @@ export const MORRISVILLE_SITES = [
 
 export const METRICS = [
   { value: 10, suffix: "+", label: "Companies in the network" },
-  { value: 20, prefix: "$", suffix: "K+", label: "Raised across the network" },
   { value: 2, suffix: "nd", label: "VisioCourt at DECA States" },
   { value: 6, suffix: " wks", label: "Fall 2026 accelerator" },
 ];

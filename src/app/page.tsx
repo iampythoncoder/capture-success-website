@@ -16,9 +16,9 @@ import {
 
 const STATS = [
   { v: 10, suffix: "", l: "Student-led companies" },
-  { v: 20, prefix: "$", suffix: "K+", l: "Raised across the network" },
+  { v: 3, suffix: "", l: "Town facilities running our tech" },
   { v: 6, suffix: "", l: "Weeks, free, in person" },
-  { v: 7, suffix: "", l: "Triangle partners" },
+  { v: 12, suffix: "", l: "Triangle partners" },
 ];
 
 const WAYS = [
