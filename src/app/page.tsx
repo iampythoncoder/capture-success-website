@@ -135,7 +135,7 @@ export default function Home() {
           {STATS.map((s) => (
             <div key={s.l}>
               <p className="t-num text-[2.5rem] leading-none">
-                <CountUp to={s.v} prefix={s.prefix} suffix={s.suffix} />
+                <CountUp to={s.v} suffix={s.suffix} />
               </p>
               <p className="muted mt-2 text-[14.5px]">{s.l}</p>
             </div>
