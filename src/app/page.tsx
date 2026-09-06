@@ -243,7 +243,7 @@ export default function Home() {
             >
               Free, in person at Frontier RTP, open to any student founder in
               grades 9 and up. Come solo and we will match you with a team.
-              Dinner every session. It ends in a live pitch night.
+              It ends in a live pitch night.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a

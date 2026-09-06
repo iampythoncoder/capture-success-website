@@ -164,11 +164,6 @@ export const BENEFITS = [
   },
   {
     n: "07",
-    title: "Dinner every session",
-    body: "Food is served at all six Mondays. Tell us about allergies on the application.",
-  },
-  {
-    n: "08",
     title: "A public finish",
     body: "Team apparel and a professional showcase for six weeks of progress.",
   },
@@ -181,7 +176,7 @@ export const FAQ = [
   },
   {
     q: "How much does it cost?",
-    a: "Nothing. The program is free, and dinner is served at every session.",
+    a: "Nothing. The program is completely free to join.",
   },
   {
     q: "Do I need an idea already?",

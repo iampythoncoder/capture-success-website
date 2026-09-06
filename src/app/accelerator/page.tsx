@@ -25,7 +25,7 @@ const FACTS = [
   ["Sessions", `Six Mondays · ${ACCELERATOR.time}`],
   ["Eligibility", ACCELERATOR.grades],
   ["Venue", `${ACCELERATOR.venue.name}, ${ACCELERATOR.venue.building}`],
-  ["Cost", "Free — dinner every session"],
+  ["Cost", "Free"],
   ["Closing night", ACCELERATOR.pitch],
 ];
 
