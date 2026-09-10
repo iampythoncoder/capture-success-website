@@ -125,13 +125,14 @@ export default function AboutPage() {
                   {initials(p.name)}
                 </span>
                 <div className="min-w-0">
-                  <p className="t-h3 truncate text-[17px]">{p.name}</p>
-                  {p.role && (
+                  <p className="t-h3 text-[17px]">{p.name}</p>
+                  <p className="soft text-[13px]">{p.role}</p>
+                  {p.founder && (
                     <p
-                      className="text-[13px] font-bold"
+                      className="mt-0.5 text-[12px] font-bold"
                       style={{ color: "var(--color-blue)" }}
                     >
-                      {p.role}
+                      Co-founder
                     </p>
                   )}
                 </div>

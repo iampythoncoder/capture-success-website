@@ -383,20 +383,21 @@ export const METRICS = [
 
 export type Person = {
   name: string;
-  role?: string;
+  role: string;
+  founder?: boolean;
 };
 
 /** The whole board as one list — no separation. */
 export const PEOPLE: Person[] = [
-  { name: "Amogh Gotaparthy", role: "Co-founder" },
-  { name: "Dhruva Valluru", role: "Co-founder" },
-  { name: "Dhruv Mishra", role: "Co-founder" },
-  { name: "Saatvik Santosh", role: "Co-founder" },
-  { name: "Ketav Karthikeyan", role: "Co-founder" },
-  { name: "Neeraj Sivashankar", role: "Co-founder" },
-  { name: "Rohit Gunturi" },
-  { name: "Aryan Mahalingam" },
-  { name: "Vihaan Kommireddy" },
+  { name: "Amogh Gotaparthy", role: "Co-Chief Executive Officer", founder: true },
+  { name: "Dhruva Valluru", role: "Co-Chief Executive Officer", founder: true },
+  { name: "Dhruv Mishra", role: "Chief Information Officer", founder: true },
+  { name: "Neeraj Sivashankar", role: "Chief Financial Officer", founder: true },
+  { name: "Saatvik Santosh", role: "Chief Technology Officer", founder: true },
+  { name: "Ketav Karthikeyan", role: "Chief Marketing Officer", founder: true },
+  { name: "Rohit Gunturi", role: "Chief Communications Officer" },
+  { name: "Aryan Mahalingam", role: "Chief Strategy Officer" },
+  { name: "Vihaan Kommireddy", role: "Chief Product Officer" },
 ];
 
 // ---------------------------------------------------------------------------
@@ -595,9 +596,9 @@ export const COMPANY_COLORS: Record<string, string> = {
 };
 
 export const NAV = [
+  { href: "/about", label: "About" },
   { href: "/accelerator", label: "Accelerator" },
   { href: "/companies", label: "Companies" },
   { href: "/finnovate", label: "Finnovate" },
-  { href: "/about", label: "About" },
   { href: "/apply", label: "Apply" },
 ] as const;
