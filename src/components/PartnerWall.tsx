@@ -69,7 +69,7 @@ export default function PartnerWall({
 
       <p className="t-lead prose-w mt-4">{blurb}</p>
 
-      <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-8 flex flex-wrap justify-center gap-4">
         {PARTNERS.map((p) => {
           const inner = (
             <>
@@ -90,13 +90,13 @@ export default function PartnerWall({
               href={p.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="card card-lift px-4 py-6"
+              className="w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(25%-0.75rem)] card card-lift px-4 py-6"
               title={p.name}
             >
               {inner}
             </a>
           ) : (
-            <div key={p.name} className="card px-4 py-6" title={p.name}>
+            <div key={p.name} className="w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(25%-0.75rem)] card px-4 py-6" title={p.name}>
               {inner}
             </div>
           );
