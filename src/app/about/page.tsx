@@ -75,38 +75,8 @@ export default function AboutPage() {
       </section>
 
       {/* The story */}
-      {STORY.map((s, i) => (
-        <section key={s.title} className="shell py-10">
-          <Reveal>
-            <div className="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-14">
-              <div className={i % 2 ? "lg:order-2" : "lg:order-1"}>
-                <p className="t-kicker">
-                  {String(i + 1).padStart(2, "0")}
-                </p>
-                <h2 className="t-h2 mt-2 max-w-[20ch]">{s.title}</h2>
-                <p className="t-lead mt-4 text-[16.5px]">{s.body}</p>
-              </div>
-              <figure className={i % 2 ? "lg:order-1" : "lg:order-2"}>
-                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[16px]">
-                  <Image
-                    src={s.img.src}
-                    alt={s.img.alt}
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 46vw"
-                    className="object-cover"
-                  />
-                </div>
-                <figcaption className="soft mt-2 text-[13.5px]">
-                  {s.img.caption}
-                </figcaption>
-              </figure>
-            </div>
-          </Reveal>
-        </section>
-      ))}
-
       {/* The team */}
-      <section className="shell border-t py-14">
+      <section className="shell pb-12">
         <Reveal>
           <p className="t-kicker">The team</p>
           <h2 className="t-h2 mt-2">Who runs it</h2>
@@ -141,6 +111,37 @@ export default function AboutPage() {
           ))}
         </div>
       </section>
+
+      {STORY.map((s, i) => (
+        <section key={s.title} className="shell py-10">
+          <Reveal>
+            <div className="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-14">
+              <div className={i % 2 ? "lg:order-2" : "lg:order-1"}>
+                <p className="t-kicker">
+                  {String(i + 1).padStart(2, "0")}
+                </p>
+                <h2 className="t-h2 mt-2 max-w-[20ch]">{s.title}</h2>
+                <p className="t-lead mt-4 text-[16.5px]">{s.body}</p>
+              </div>
+              <figure className={i % 2 ? "lg:order-1" : "lg:order-2"}>
+                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[16px]">
+                  <Image
+                    src={s.img.src}
+                    alt={s.img.alt}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 46vw"
+                    className="object-cover"
+                  />
+                </div>
+                <figcaption className="soft mt-2 text-[13.5px]">
+                  {s.img.caption}
+                </figcaption>
+              </figure>
+            </div>
+          </Reveal>
+        </section>
+      ))}
+
 
       <section className="shell pb-4">
         <div className="tile flex flex-wrap items-center justify-between gap-5 p-8">
