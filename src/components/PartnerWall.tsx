@@ -34,7 +34,7 @@ function Logo({ p }: { p: Partner }) {
   if (p.logo.endsWith(".svg")) {
     return (
       // eslint-disable-next-line @next/next/no-img-element
-      <img src={p.logo} alt={p.name} className="max-h-[42px] w-auto max-w-[80%] object-contain" />
+      <img src={p.logo} alt={p.name} className="max-h-[42px] w-auto max-w-full object-contain" />
     );
   }
   return (
@@ -43,7 +43,7 @@ function Logo({ p }: { p: Partner }) {
       alt={p.name}
       width={220}
       height={70}
-      className="max-h-[42px] w-auto max-w-[80%] object-contain"
+      className="max-h-[42px] w-auto max-w-full object-contain"
     />
   );
 }
