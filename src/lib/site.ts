@@ -395,9 +395,8 @@ export const PEOPLE: Person[] = [
   { name: "Neeraj Sivashankar", role: "Chief Operating Officer", founder: true },
   { name: "Saatvik Santosh", role: "Chief Technology Officer", founder: true },
   { name: "Ketav Karthikeyan", role: "Chief Marketing Officer", founder: true },
-  { name: "Rohit Gunturi", role: "Chief Communications Officer" },
+  { name: "Rohit Gunturi", role: "Chief Communications Officer", founder: true },
   { name: "Aryan Mahalingam", role: "Chief Strategy Officer" },
-  { name: "Vihaan Kommireddy", role: "Chief Product Officer" },
 ];
 
 // ---------------------------------------------------------------------------
