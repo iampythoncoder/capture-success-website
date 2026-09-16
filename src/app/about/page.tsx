@@ -96,7 +96,7 @@ export default function AboutPage() {
                 </span>
                 <div className="min-w-0">
                   <p className="t-h3 text-[17px]">{p.name}</p>
-                  <p className="soft text-[13px]">{p.role}</p>
+                  {p.role && <p className="soft text-[13px]">{p.role}</p>}
                   {p.founder && (
                     <p
                       className="mt-0.5 text-[12px] font-bold"

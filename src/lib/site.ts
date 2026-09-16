@@ -383,20 +383,20 @@ export const METRICS = [
 
 export type Person = {
   name: string;
-  role: string;
+  role?: string;
   founder?: boolean;
 };
 
 /** The whole board as one list — no separation. */
 export const PEOPLE: Person[] = [
-  { name: "Amogh Gotaparthy", role: "Co-Chief Executive Officer", founder: true },
-  { name: "Dhruva Valluru", role: "Co-Chief Executive Officer", founder: true },
-  { name: "Dhruv Mishra", role: "Chief Financial Officer", founder: true },
-  { name: "Neeraj Sivashankar", role: "Chief Operating Officer" },
-  { name: "Saatvik Santosh", role: "Chief Technology Officer" },
-  { name: "Ketav Karthikeyan", role: "Chief Marketing Officer" },
-  { name: "Rohit Gunturi", role: "Chief Communications Officer" },
-  { name: "Aryan Mahalingam", role: "Chief Strategy Officer" },
+  { name: "Amogh Gotaparthy", founder: true },
+  { name: "Dhruva Valluru", founder: true },
+  { name: "Dhruv Mishra", founder: true },
+  { name: "Neeraj Sivashankar" },
+  { name: "Saatvik Santosh" },
+  { name: "Ketav Karthikeyan" },
+  { name: "Rohit Gunturi" },
+  { name: "Aryan Mahalingam" },
 ];
 
 // ---------------------------------------------------------------------------
