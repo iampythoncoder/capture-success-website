@@ -392,10 +392,10 @@ export const PEOPLE: Person[] = [
   { name: "Amogh Gotaparthy", role: "Co-Chief Executive Officer", founder: true },
   { name: "Dhruva Valluru", role: "Co-Chief Executive Officer", founder: true },
   { name: "Dhruv Mishra", role: "Chief Financial Officer", founder: true },
-  { name: "Neeraj Sivashankar", role: "Chief Operating Officer", founder: true },
-  { name: "Saatvik Santosh", role: "Chief Technology Officer", founder: true },
-  { name: "Ketav Karthikeyan", role: "Chief Marketing Officer", founder: true },
-  { name: "Rohit Gunturi", role: "Chief Communications Officer", founder: true },
+  { name: "Neeraj Sivashankar", role: "Chief Operating Officer" },
+  { name: "Saatvik Santosh", role: "Chief Technology Officer" },
+  { name: "Ketav Karthikeyan", role: "Chief Marketing Officer" },
+  { name: "Rohit Gunturi", role: "Chief Communications Officer" },
   { name: "Aryan Mahalingam", role: "Chief Strategy Officer" },
 ];
 
