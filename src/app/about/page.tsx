@@ -24,9 +24,9 @@ const STORY = [
     title: "It started with watching friends build alone",
     body: "Capture Success was started in 2026 by a group of high school students in the Triangle. The problem we kept seeing wasn't a lack of ideas — classmates had real ones — it was that everyone was building solo: no teammates, no feedback, nobody who had shipped anything before. So we made the room we wished existed.",
     img: {
-      src: "/media/finnovate/event-group.webp",
-      alt: "Capture Success organizers and judges at Startup Spotlight",
-      caption: "Organizers and judges at Startup Spotlight, built with our DECA chapter",
+      src: "/media/week1/teams-working.webp",
+      alt: "A student team working on laptops at a Capture Success session",
+      caption: "The room we ended up making — week one of the Fall 2026 cohort",
     },
   },
   {
@@ -51,9 +51,9 @@ const STORY = [
     title: "Now we're building the room for everyone",
     body: "This fall we're running a free six-week accelerator at Frontier RTP, open to any student in grades nine and up — with twelve partners we recruited ourselves, from UNC and NC State to Launch Chapel Hill, CED, Wake Tech, and Hub RTP. It ends on a stage, at Final Pitch Night, in front of the Triangle startup community.",
     img: {
-      src: "/media/finnovate/award-presentation.webp",
-      alt: "An award presentation at a Capture Success event",
-      caption: "Where every cohort ends — awards, judges, and a full room",
+      src: "/media/week1/room-wide.webp",
+      alt: "The full room at the first session of the Fall 2026 cohort",
+      caption: "Week one, Sept 14 — Frontier RTP, Building 600",
     },
   },
 ];

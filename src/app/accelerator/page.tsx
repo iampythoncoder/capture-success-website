@@ -12,6 +12,7 @@ import {
   FAQ,
   HOW_TO_JOIN,
   SITE,
+  WEEK_ONE,
   WEEKS,
 } from "@/lib/site";
 
@@ -64,10 +65,7 @@ export default function AcceleratorPage() {
 
         <Reveal delay={90}>
           <div className="card p-6">
-            <p className="t-kicker">First session begins in</p>
-            <div className="mt-3">
-              <Countdown iso={ACCELERATOR.startsAt} />
-            </div>
+            <Countdown iso={ACCELERATOR.startsAt} />
             <dl className="rows mt-6">
               {FACTS.map(([k, v]) => (
                 <div
@@ -90,6 +88,67 @@ export default function AcceleratorPage() {
             </a>
           </div>
         </Reveal>
+      </section>
+
+      {/* ── Week one ──────────────────────────────────────────────────── */}
+      <section className="shell pb-20">
+        <Reveal>
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p className="t-kicker">Week one</p>
+              <h2 className="t-h2 mt-2">The cohort is already in the room</h2>
+            </div>
+            <p className="soft max-w-[32ch] text-[14.5px]">
+              Sept 14 · {ACCELERATOR.venue.name}, {ACCELERATOR.venue.building}
+            </p>
+          </div>
+          <p className="t-lead prose-w mt-4">
+            First session: everyone in one room, laptops open, working on what
+            they already had. Five more Mondays after this one.
+          </p>
+        </Reveal>
+
+        <div className="mt-8 grid gap-4 lg:grid-cols-3">
+          <Reveal className="h-full">
+            <figure className="flex h-full flex-col">
+              <div className="relative min-h-[320px] flex-1 overflow-hidden rounded-[16px]">
+                <Image
+                  src={WEEK_ONE[5].src}
+                  alt={WEEK_ONE[5].alt}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 32vw"
+                  className="object-cover"
+                />
+              </div>
+              <figcaption className="soft mt-2 text-[13px]">
+                {WEEK_ONE[5].caption}
+              </figcaption>
+            </figure>
+          </Reveal>
+
+          <div className="grid gap-4 sm:grid-cols-2 lg:col-span-2">
+            {[WEEK_ONE[1], WEEK_ONE[2], WEEK_ONE[4], WEEK_ONE[0]].map(
+              (shot, i) => (
+                <Reveal key={shot.src} delay={(i % 2) * 70}>
+                  <figure>
+                    <div className="relative aspect-[4/3] overflow-hidden rounded-[14px]">
+                      <Image
+                        src={shot.src}
+                        alt={shot.alt}
+                        fill
+                        sizes="(max-width: 640px) 100vw, 32vw"
+                        className="object-cover"
+                      />
+                    </div>
+                    <figcaption className="soft mt-2 text-[13px]">
+                      {shot.caption}
+                    </figcaption>
+                  </figure>
+                </Reveal>
+              ),
+            )}
+          </div>
+        </div>
       </section>
 
       <section className="shell pb-20">
@@ -237,8 +296,8 @@ export default function AcceleratorPage() {
             </div>
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[14px]">
               <Image
-                src="/media/finnovate/award-presentation.webp"
-                alt="Award presentation at a Capture Success event"
+                src={WEEK_ONE[3].src}
+                alt={WEEK_ONE[3].alt}
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover"

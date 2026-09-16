@@ -20,9 +20,18 @@ function remaining(target: number) {
   };
 }
 
-/** Counts down to the first session. Placeholder until mounted so server and
- *  client markup agree. */
-export default function Countdown({ iso }: { iso: string }) {
+/** Counts down to the first session, then says the cohort is under way. Owns
+ *  its own kicker so the label never contradicts the state it is describing.
+ *  Placeholder until mounted so server and client markup agree. */
+export default function Countdown({
+  iso,
+  label = "First session begins in",
+  overLabel = "The cohort",
+}: {
+  iso: string;
+  label?: string;
+  overLabel?: string;
+}) {
   const target = new Date(iso).getTime();
   const [t, setT] = useState<ReturnType<typeof remaining> | null>(null);
 
@@ -35,18 +44,29 @@ export default function Countdown({ iso }: { iso: string }) {
     };
   }, [target]);
 
-  if (!t) return <div className="h-[46px]" aria-hidden />;
+  if (!t)
+    return (
+      <>
+        <p className="t-kicker">{label}</p>
+        <div className="mt-3 h-[46px]" aria-hidden />
+      </>
+    );
 
   if (t.over) {
     return (
-      <p className="t-h3" style={{ color: "var(--color-blue)" }}>
-        Cohort in session
-      </p>
+      <>
+        <p className="t-kicker">{overLabel}</p>
+        <p className="t-h3 mt-3" style={{ color: "var(--color-blue)" }}>
+          In session — week one done
+        </p>
+      </>
     );
   }
 
   return (
-    <div className="flex items-baseline gap-5">
+    <>
+      <p className="t-kicker">{label}</p>
+      <div className="mt-3 flex items-baseline gap-5">
       {UNITS.map((u) => (
         <div key={u.key} className="flex items-baseline gap-1">
           <span className="t-num text-[2rem] leading-none">
@@ -55,6 +75,7 @@ export default function Countdown({ iso }: { iso: string }) {
           <span className="soft text-[13px] font-semibold">{u.label}</span>
         </div>
       ))}
-    </div>
+      </div>
+    </>
   );
 }

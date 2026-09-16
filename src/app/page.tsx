@@ -11,6 +11,7 @@ import {
   FEATURED,
   MILESTONES,
   SITE,
+  WEEK_ONE,
   WEEKS,
 } from "@/lib/site";
 
@@ -299,6 +300,34 @@ export default function Home() {
             </div>
           </Reveal>
         </div>
+
+        <div className="shell pb-20">
+          <Reveal>
+            <div className="grid gap-3 sm:grid-cols-3">
+              {WEEK_ONE.slice(1, 4).map((shot) => (
+                <div
+                  key={shot.src}
+                  className="relative aspect-[4/3] overflow-hidden rounded-[14px]"
+                >
+                  <Image
+                    src={shot.src}
+                    alt={shot.alt}
+                    fill
+                    sizes="(max-width: 640px) 100vw, 30vw"
+                    className="object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+            <p
+              className="mt-3 text-[13.5px]"
+              style={{ color: "rgba(255,255,255,.6)" }}
+            >
+              Week one of the Fall 2026 cohort — Sept 14 at {ACCELERATOR.venue.name},{" "}
+              {ACCELERATOR.venue.building}.
+            </p>
+          </Reveal>
+        </div>
       </section>
 
       {/* ── Milestones ────────────────────────────────────────────────── */}
@@ -352,20 +381,13 @@ export default function Home() {
       <section aria-label="The network in person" className="overflow-hidden pb-4">
         <div className="marquee-track flex w-max gap-4">
           {[...Array(2)].flatMap((_, r) =>
-            [
-              "/media/beacon-tye-regionals.jpg",
-              "/media/finnovate/live-pitch.webp",
-              "/media/finnovate/winning-team.webp",
-              "/media/visiocourt-team.webp",
-              "/media/finnovate/award-presentation.webp",
-              "/media/finnovate/event-group.webp",
-            ].map((src, i) => (
+            WEEK_ONE.map((shot, i) => (
               <div
                 key={`${r}-${i}`}
                 className="relative h-[190px] w-[280px] shrink-0 overflow-hidden rounded-[14px]"
               >
                 <Image
-                  src={src}
+                  src={shot.src}
                   alt=""
                   fill
                   sizes="280px"

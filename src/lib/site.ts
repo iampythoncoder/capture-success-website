@@ -214,6 +214,67 @@ export const HOW_TO_JOIN = [
   },
 ];
 
+export type Shot = { src: string; alt: string; caption: string };
+
+/** Week one of the Fall 2026 cohort — Sept 14 at Frontier RTP, Building 600. */
+export const WEEK_ONE: Shot[] = [
+  {
+    src: "/media/week1/banner-table.webp",
+    alt: "The Capture Success banner hung at Frontier RTP before the first session",
+    caption: "Set up before the doors opened",
+  },
+  {
+    src: "/media/week1/room-wide.webp",
+    alt: "The full room at the first session of the Fall 2026 cohort",
+    caption: "Week one — Frontier RTP, Building 600",
+  },
+  {
+    src: "/media/week1/teams-working.webp",
+    alt: "A student team working on laptops during the first session",
+    caption: "Teams heads-down straight after the session",
+  },
+  {
+    src: "/media/week1/kickoff.webp",
+    alt: "Students seated for the opening session of the accelerator",
+    caption: "Kickoff — six Mondays to go",
+  },
+  {
+    src: "/media/week1/building.webp",
+    alt: "Students building at the tables during week one",
+    caption: "Everyone brought something they were already working on",
+  },
+  {
+    src: "/media/week1/banner-night.webp",
+    alt: "Two students holding the Capture Success banner outside Frontier RTP at night",
+    caption: "Packing up outside Building 600",
+  },
+  {
+    src: "/media/week1/heads-down.webp",
+    alt: "Three students working on laptops at the first session",
+    caption: "Week one, second half",
+  },
+  {
+    src: "/media/week1/presenting.webp",
+    alt: "Organisers running the first session from the front of the room",
+    caption: "Running the room ourselves",
+  },
+  {
+    src: "/media/week1/session-talk.webp",
+    alt: "A Capture Success organiser talking to the room during week one",
+    caption: "Week one, from the front",
+  },
+  {
+    src: "/media/week1/room-setup.webp",
+    alt: "Students finding seats before the first session starts",
+    caption: "Doors open at six",
+  },
+  {
+    src: "/media/week1/presenting-tall.webp",
+    alt: "An organiser presenting to the seated room during week one",
+    caption: "First session, Sept 14",
+  },
+];
+
 // ---------------------------------------------------------------------------
 // Companies
 // ---------------------------------------------------------------------------
@@ -578,8 +639,8 @@ export const MILESTONES = [
   },
   {
     date: "Sept 2026",
-    title: "Fall 2026 accelerator opens",
-    body: "Six Mondays at Frontier RTP with UNC, Launch Chapel Hill, CED, Wake Tech, and more in the room.",
+    title: "Fall 2026 accelerator begins",
+    body: "Week one ran Sept 14 at Frontier RTP — six Mondays with UNC, Launch Chapel Hill, CED, Wake Tech, and more in the room.",
   },
 ];
 
