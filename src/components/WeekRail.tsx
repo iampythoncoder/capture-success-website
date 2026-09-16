@@ -44,7 +44,9 @@ export default function WeekRail() {
                 {w.title}
                 {w.luma && (
                   <span
-                    className="ml-2.5 rounded-md px-2 py-0.5 align-middle text-[12px] font-bold"
+                    // Its own line on narrow rows, inline once there is room —
+                    // inline-only pushed the toggle off the row on phones.
+                    className="mt-1 block w-fit rounded-md px-2 py-0.5 text-[12px] font-bold sm:mt-0 sm:ml-2.5 sm:inline-block sm:align-middle"
                     style={{
                       background: "rgba(105,181,255,.16)",
                       color: "var(--color-brand)",
