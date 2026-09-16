@@ -214,7 +214,13 @@ export const HOW_TO_JOIN = [
   },
 ];
 
-export type Shot = { src: string; alt: string; caption: string };
+export type Shot = {
+  src: string;
+  alt: string;
+  caption: string;
+  /** The frame's own ratio — slots use it so nothing is ever cropped. */
+  aspect: string;
+};
 
 /** Week one of the Fall 2026 cohort — Sept 14 at Frontier RTP, Building 600. */
 export const WEEK_ONE: Shot[] = [
@@ -222,56 +228,67 @@ export const WEEK_ONE: Shot[] = [
     src: "/media/week1/banner-table.webp",
     alt: "The Capture Success banner hung at Frontier RTP before the first session",
     caption: "Set up before the doors opened",
+    aspect: "4 / 3",
   },
   {
     src: "/media/week1/room-wide.webp",
     alt: "The full room at the first session of the Fall 2026 cohort",
     caption: "Week one — Frontier RTP, Building 600",
+    aspect: "4 / 3",
   },
   {
     src: "/media/week1/teams-working.webp",
     alt: "A student team working on laptops during the first session",
     caption: "Teams heads-down straight after the session",
+    aspect: "4 / 3",
   },
   {
     src: "/media/week1/kickoff.webp",
     alt: "Students seated for the opening session of the accelerator",
     caption: "Kickoff — six Mondays to go",
+    aspect: "4 / 3",
   },
   {
     src: "/media/week1/building.webp",
     alt: "Students building at the tables during week one",
     caption: "Everyone brought something they were already working on",
+    aspect: "4 / 3",
   },
   {
     src: "/media/week1/banner-night.webp",
     alt: "Two students holding the Capture Success banner outside Frontier RTP at night",
     caption: "Packing up outside Building 600",
+    aspect: "3 / 4",
   },
   {
     src: "/media/week1/heads-down.webp",
     alt: "Three students working on laptops at the first session",
     caption: "Week one, second half",
+    aspect: "4 / 3",
   },
   {
     src: "/media/week1/presenting.webp",
     alt: "Organisers running the first session from the front of the room",
     caption: "Running the room ourselves",
+    aspect: "4 / 3",
   },
   {
     src: "/media/week1/session-talk.webp",
     alt: "A Capture Success organiser talking to the room during week one",
     caption: "Week one, from the front",
+    aspect: "4 / 3",
   },
   {
     src: "/media/week1/room-setup.webp",
     alt: "Students finding seats before the first session starts",
     caption: "Doors open at six",
+    aspect: "4 / 3",
   },
   {
     src: "/media/week1/presenting-tall.webp",
     alt: "An organiser presenting to the seated room during week one",
     caption: "First session, Sept 14",
+    aspect: "3 / 4",
   },
 ];
 
@@ -357,7 +374,7 @@ export const FEATURED: Company[] = [
       src: "/media/visiocourt-team.webp",
       alt: "The VisioCourt team holding their trophy at DECA States",
       caption: "VisioCourt placed second at DECA States",
-      aspect: "3 / 4",
+    aspect: "3 / 4",
       narrow: true,
     },
     featured: true,
@@ -383,7 +400,7 @@ export const FEATURED: Company[] = [
       alt: "The Beacon team holding a $1,000 check after winning TYE Regionals",
       caption:
         "Beacon winning TYE Regionals with TiE Raleigh Durham, April 2026",
-      aspect: "4 / 3",
+    aspect: "4 / 3",
     },
     featured: true,
   },

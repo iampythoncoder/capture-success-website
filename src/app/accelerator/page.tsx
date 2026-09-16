@@ -104,50 +104,34 @@ export default function AcceleratorPage() {
           </div>
           <p className="t-lead prose-w mt-4">
             First session: everyone in one room, laptops open, working on what
-            they already had. Five more Mondays after this one.
+            they already had. Every frame from the night is below — five more
+            Mondays after this one.
           </p>
         </Reveal>
 
-        <div className="mt-8 grid gap-4 lg:grid-cols-3">
-          <Reveal className="h-full">
-            <figure className="flex h-full flex-col">
-              <div className="relative min-h-[320px] flex-1 overflow-hidden rounded-[16px]">
-                <Image
-                  src={WEEK_ONE[5].src}
-                  alt={WEEK_ONE[5].alt}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 32vw"
-                  className="object-cover"
-                />
-              </div>
-              <figcaption className="soft mt-2 text-[13px]">
-                {WEEK_ONE[5].caption}
-              </figcaption>
-            </figure>
-          </Reveal>
-
-          <div className="grid gap-4 sm:grid-cols-2 lg:col-span-2">
-            {[WEEK_ONE[1], WEEK_ONE[2], WEEK_ONE[4], WEEK_ONE[0]].map(
-              (shot, i) => (
-                <Reveal key={shot.src} delay={(i % 2) * 70}>
-                  <figure>
-                    <div className="relative aspect-[4/3] overflow-hidden rounded-[14px]">
-                      <Image
-                        src={shot.src}
-                        alt={shot.alt}
-                        fill
-                        sizes="(max-width: 640px) 100vw, 32vw"
-                        className="object-cover"
-                      />
-                    </div>
-                    <figcaption className="soft mt-2 text-[13px]">
-                      {shot.caption}
-                    </figcaption>
-                  </figure>
-                </Reveal>
-              ),
-            )}
-          </div>
+        {/* Masonry: every frame keeps its own ratio, so nothing is cropped. */}
+        <div className="mt-8 gap-4 [column-count:1] sm:[column-count:2] lg:[column-count:3]">
+          {WEEK_ONE.map((shot, i) => (
+            <Reveal key={shot.src} delay={(i % 3) * 60} className="mb-4 break-inside-avoid">
+              <figure>
+                <div
+                  className="relative w-full overflow-hidden rounded-[14px]"
+                  style={{ aspectRatio: shot.aspect }}
+                >
+                  <Image
+                    src={shot.src}
+                    alt={shot.alt}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 48vw, 32vw"
+                    className="object-cover"
+                  />
+                </div>
+                <figcaption className="soft mt-2 text-[13px]">
+                  {shot.caption}
+                </figcaption>
+              </figure>
+            </Reveal>
+          ))}
         </div>
       </section>
 

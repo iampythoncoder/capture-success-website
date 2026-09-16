@@ -40,11 +40,7 @@ export default function Gallery() {
             className={`group text-left ${i === 0 ? "sm:col-span-2" : ""}`}
             aria-label={`View photo: ${p.title}`}
           >
-            <span
-              className={`relative block w-full overflow-hidden  border ${
-                i === 0 ? "aspect-[16/9]" : "aspect-[4/3]"
-              }`}
-            >
+            <span className="relative block aspect-[3/2] w-full overflow-hidden  border">
               <Image
                 src={p.src}
                 alt={p.title}

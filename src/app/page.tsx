@@ -307,7 +307,8 @@ export default function Home() {
               {WEEK_ONE.slice(1, 4).map((shot) => (
                 <div
                   key={shot.src}
-                  className="relative aspect-[4/3] overflow-hidden rounded-[14px]"
+                  className="relative overflow-hidden rounded-[14px]"
+                  style={{ aspectRatio: shot.aspect }}
                 >
                   <Image
                     src={shot.src}
@@ -384,7 +385,8 @@ export default function Home() {
             WEEK_ONE.map((shot, i) => (
               <div
                 key={`${r}-${i}`}
-                className="relative h-[190px] w-[280px] shrink-0 overflow-hidden rounded-[14px]"
+                className="relative h-[190px] shrink-0 overflow-hidden rounded-[14px]"
+                style={{ aspectRatio: shot.aspect }}
               >
                 <Image
                   src={shot.src}
@@ -403,7 +405,7 @@ export default function Home() {
       <section className="shell py-20">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
           <Reveal>
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[18px]">
+            <div className="relative aspect-[3/2] w-full overflow-hidden rounded-[18px]">
               <Image
                 src="/media/finnovate/judging-panel.webp"
                 alt="The judging panel at Finnovate Startup Spotlight"

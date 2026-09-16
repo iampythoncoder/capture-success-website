@@ -25,6 +25,7 @@ const STORY = [
     body: "Capture Success was started in 2026 by a group of high school students in the Triangle. The problem we kept seeing wasn't a lack of ideas — classmates had real ones — it was that everyone was building solo: no teammates, no feedback, nobody who had shipped anything before. So we made the room we wished existed.",
     img: {
       src: "/media/week1/teams-working.webp",
+      aspect: "4 / 3",
       alt: "A student team working on laptops at a Capture Success session",
       caption: "The room we ended up making — week one of the Fall 2026 cohort",
     },
@@ -34,6 +35,7 @@ const STORY = [
     body: "Before the accelerator existed, we ran Finnovate — months of weekly student-focused fintech writing, then Startup Spotlight: a live pitch competition where more than twenty teams presented to six business professionals. The room was full. That was the proof.",
     img: {
       src: "/media/finnovate/live-pitch.webp",
+      aspect: "3 / 2",
       alt: "A student pitching live at Startup Spotlight",
       caption: "Startup Spotlight — 20+ teams pitched live",
     },
@@ -43,6 +45,7 @@ const STORY = [
     body: "Beacon, a team guided start to finish inside our first cohort, took first place at TiE Young Entrepreneurs Regionals and qualified for nationals in Seattle. Around them a network formed — today it's ten student-led companies, including VisioCourt, which runs live court tracking for the Town of Morrisville and presented at MIT.",
     img: {
       src: "/media/beacon-tye-regionals.jpg",
+      aspect: "4 / 3",
       alt: "The Beacon team celebrating their TYE Regionals win",
       caption: "Beacon after winning TYE Regionals — first place and a spot at nationals",
     },
@@ -52,6 +55,7 @@ const STORY = [
     body: "This fall we're running a free six-week accelerator at Frontier RTP, open to any student in grades nine and up — with twelve partners we recruited ourselves, from UNC and NC State to Launch Chapel Hill, CED, Wake Tech, and Hub RTP. It ends on a stage, at Final Pitch Night, in front of the Triangle startup community.",
     img: {
       src: "/media/week1/room-wide.webp",
+      aspect: "4 / 3",
       alt: "The full room at the first session of the Fall 2026 cohort",
       caption: "Week one, Sept 14 — Frontier RTP, Building 600",
     },
@@ -124,7 +128,10 @@ export default function AboutPage() {
                 <p className="t-lead mt-4 text-[16.5px]">{s.body}</p>
               </div>
               <figure className={i % 2 ? "lg:order-1" : "lg:order-2"}>
-                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[16px]">
+                <div
+                  className="relative w-full overflow-hidden rounded-[16px]"
+                  style={{ aspectRatio: s.img.aspect }}
+                >
                   <Image
                     src={s.img.src}
                     alt={s.img.alt}
