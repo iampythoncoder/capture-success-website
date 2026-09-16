@@ -53,6 +53,8 @@ export type Week = {
   title: string;
   summary: string;
   items: string[];
+  /** Set when the session is open to the public and takes registrations. */
+  luma?: string;
 };
 
 export const WEEKS: Week[] = [
@@ -74,6 +76,7 @@ export const WEEKS: Week[] = [
     n: 2,
     date: "Sept 21",
     iso: "2026-09-21",
+    luma: "https://luma.com/x4kw5v1b",
     title: "Customer discovery",
     summary: "Real interviews with real users. Evidence over guessing.",
     items: [
@@ -120,6 +123,7 @@ export const WEEKS: Week[] = [
     n: 6,
     date: "Oct 19",
     iso: "2026-10-19",
+    luma: "https://luma.com/ren443hk",
     title: "Final pitch night",
     summary:
       "Pitch live to judges and the Triangle startup community.",
@@ -211,6 +215,60 @@ export const HOW_TO_JOIN = [
     n: "03",
     title: "Show up Sept 14",
     body: "6:00 PM at Frontier RTP, Building 600 — 600 Park Offices Drive, RTP.",
+  },
+];
+
+export type OpenNight = {
+  week: number;
+  date: string;
+  dateLabel: string;
+  time: string;
+  doors: string;
+  title: string;
+  blurb: string;
+  rosterLabel: string;
+  roster: string[];
+  note?: string;
+  audience: string;
+  href: string;
+};
+
+/** The sessions the public can register for, on Luma. */
+export const OPEN_NIGHTS: OpenNight[] = [
+  {
+    week: 2,
+    date: "Sept 21",
+    dateLabel: "Monday, September 21",
+    time: "6:00 – 8:00 PM",
+    doors: "Doors 5:30 · free parking on site",
+    title: "Founder Networking Night",
+    blurb:
+      "The night we open the room. Triangle founders come talk to the cohort about what they are building and what the early days actually looked like, then stay so the students can ask them anything.",
+    rosterLabel: "Confirmed",
+    roster: [
+      "Doug Schepers — CEO, Fizz Studio",
+      "Austin Carroll — CEO, Warrant",
+      "Malhar Shah — Founder and CEO, microWatt",
+    ],
+    audience:
+      "Founders at any stage, operators and mentors. No prep, no slides, and you do not need to stay the full two hours.",
+    href: "https://luma.com/x4kw5v1b",
+  },
+  {
+    week: 6,
+    date: "Oct 19",
+    dateLabel: "Monday, October 19",
+    time: "6:00 – 8:00 PM",
+    doors: "Doors 5:30 · free parking on site",
+    title: "Pitch Competition and Demo Day",
+    blurb:
+      "The final night. Every team pitches to a judging panel, awards come out of a $2,000 prize pool, and then the room opens into networking. These founders are 15 to 18 and have spent six weeks getting here.",
+    rosterLabel: "Judges confirmed",
+    roster: ["Daniel Coley — Cofounders Capital"],
+    note: "The panel is still forming — get in touch if you want a seat on it.",
+    audience:
+      "Investors, founders, operators, educators, and anyone who wants to see what Triangle teenagers are actually building. Come ask hard questions.",
+    href: "https://luma.com/ren443hk",
   },
 ];
 

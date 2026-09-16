@@ -42,6 +42,17 @@ export default function WeekRail() {
               </span>
               <span className="flex-1 text-[16px] font-bold tracking-[-0.015em]">
                 {w.title}
+                {w.luma && (
+                  <span
+                    className="ml-2.5 rounded-md px-2 py-0.5 align-middle text-[12px] font-bold"
+                    style={{
+                      background: "rgba(105,181,255,.16)",
+                      color: "var(--color-brand)",
+                    }}
+                  >
+                    Open to the public
+                  </span>
+                )}
               </span>
               <span
                 aria-hidden
@@ -83,6 +94,19 @@ export default function WeekRail() {
                     style={{ background: "var(--color-brand)", color: "var(--color-navy)" }}
                   >
                     Pitch competition
+                  </p>
+                )}
+                {w.luma && (
+                  <p className="mt-3">
+                    <a
+                      href={w.luma}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[14.5px] font-bold"
+                      style={{ color: "var(--color-brand)" }}
+                    >
+                      Register for this night <span aria-hidden>↗</span>
+                    </a>
                   </p>
                 )}
               </div>

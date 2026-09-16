@@ -11,6 +11,7 @@ import {
   BENEFITS,
   FAQ,
   HOW_TO_JOIN,
+  OPEN_NIGHTS,
   SITE,
   WEEK_ONE,
   WEEKS,
@@ -162,6 +163,81 @@ export default function AcceleratorPage() {
           <div className="mt-8">
             <WeekRail />
           </div>
+        </div>
+      </section>
+
+      {/* ── Open nights ───────────────────────────────────────────────── */}
+      <section className="shell py-20">
+        <Reveal>
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p className="t-kicker">Open nights</p>
+              <h2 className="t-h2 mt-2 max-w-[20ch]">
+                Two of the six are open to the Triangle
+              </h2>
+            </div>
+            <p className="soft max-w-[30ch] text-[14.5px]">
+              Free to attend · {ACCELERATOR.venue.name},{" "}
+              {ACCELERATOR.venue.building}
+            </p>
+          </div>
+          <p className="t-lead prose-w mt-4">
+            You do not have to be in the cohort to come to these. Register on
+            Luma and show up.
+          </p>
+        </Reveal>
+
+        <div className="mt-8 grid gap-5 lg:grid-cols-2">
+          {OPEN_NIGHTS.map((night, i) => (
+            <Reveal key={night.href} delay={i * 80} className="h-full">
+              <article className="card flex h-full flex-col p-6">
+                <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                  <p className="t-kicker">
+                    Week {night.week} · {night.dateLabel}
+                  </p>
+                  <p className="soft text-[13px]">{night.time}</p>
+                </div>
+                <h3 className="t-h3 mt-2 text-[21px]">{night.title}</h3>
+                <p className="muted mt-3 max-w-[52ch] text-[15px]">
+                  {night.blurb}
+                </p>
+
+                <div className="mt-5">
+                  <p className="t-kicker">{night.rosterLabel}</p>
+                  <ul className="mt-2 space-y-1">
+                    {night.roster.map((person) => (
+                      <li
+                        key={person}
+                        className="muted flex gap-2.5 text-[14.5px]"
+                      >
+                        <span className="dot mt-[9px]" />
+                        <span>{person}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  {night.note && (
+                    <p className="soft mt-2 text-[13.5px]">{night.note}</p>
+                  )}
+                </div>
+
+                <p className="muted mt-5 max-w-[52ch] text-[14.5px]">
+                  {night.audience}
+                </p>
+
+                <div className="mt-auto pt-6">
+                  <a
+                    href={night.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-primary btn-sm"
+                  >
+                    Register on Luma
+                  </a>
+                  <p className="soft mt-2 text-[13px]">{night.doors}</p>
+                </div>
+              </article>
+            </Reveal>
+          ))}
         </div>
       </section>
 
