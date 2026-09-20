@@ -528,7 +528,7 @@ export const PEOPLE: Person[] = [
   { name: "Amogh Gotaparthy", founder: true },
   { name: "Dhruva Valluru", founder: true },
   { name: "Dhruv Mishra", founder: true },
-  { name: "Neeraj Sivashankar" },
+  { name: "Neeraj Sivashankar", founder: true },
   { name: "Saatvik Santosh" },
   { name: "Ketav Karthikeyan" },
   { name: "Rohit Gunturi" },
