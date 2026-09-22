@@ -10,8 +10,9 @@ import {
   ALSO_BUILDING,
   FEATURED,
   MILESTONES,
+  ALL_SHOTS,
+  SESSIONS,
   SITE,
-  WEEK_ONE,
   WEEKS,
 } from "@/lib/site";
 
@@ -304,7 +305,7 @@ export default function Home() {
         <div className="shell pb-20">
           <Reveal>
             <div className="grid gap-3 sm:grid-cols-3">
-              {WEEK_ONE.slice(1, 4).map((shot) => (
+              {SESSIONS[1].shots.slice(0, 3).map((shot) => (
                 <div
                   key={shot.src}
                   className="relative overflow-hidden rounded-[14px]"
@@ -324,8 +325,8 @@ export default function Home() {
               className="mt-3 text-[13.5px]"
               style={{ color: "rgba(255,255,255,.6)" }}
             >
-              Week one of the Fall 2026 cohort — Sept 14 at {ACCELERATOR.venue.name},{" "}
-              {ACCELERATOR.venue.building}.
+              {SESSIONS[SESSIONS.length - 1].title} — {SESSIONS[SESSIONS.length - 1].date} at{" "}
+              {ACCELERATOR.venue.name}, {ACCELERATOR.venue.building}.
             </p>
           </Reveal>
         </div>
@@ -382,7 +383,7 @@ export default function Home() {
       <section aria-label="The network in person" className="overflow-hidden pb-4">
         <div className="marquee-track flex w-max gap-4">
           {[...Array(2)].flatMap((_, r) =>
-            WEEK_ONE.map((shot, i) => (
+            ALL_SHOTS.map((shot, i) => (
               <div
                 key={`${r}-${i}`}
                 className="relative h-[190px] shrink-0 overflow-hidden rounded-[14px]"

@@ -12,8 +12,8 @@ import {
   FAQ,
   HOW_TO_JOIN,
   OPEN_NIGHTS,
+  SESSIONS,
   SITE,
-  WEEK_ONE,
   WEEKS,
 } from "@/lib/site";
 
@@ -66,7 +66,7 @@ export default function AcceleratorPage() {
 
         <Reveal delay={90}>
           <div className="card p-6">
-            <Countdown iso={ACCELERATOR.startsAt} />
+            <Countdown iso={ACCELERATOR.startsAt} done={SESSIONS.length} />
             <dl className="rows mt-6">
               {FACTS.map(([k, v]) => (
                 <div
@@ -91,49 +91,60 @@ export default function AcceleratorPage() {
         </Reveal>
       </section>
 
-      {/* ── Week one ──────────────────────────────────────────────────── */}
+      {/* ── Sessions ──────────────────────────────────────────────────── */}
       <section className="shell pb-20">
         <Reveal>
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <p className="t-kicker">Week one</p>
-              <h2 className="t-h2 mt-2">The cohort is already in the room</h2>
+              <p className="t-kicker">The cohort so far</p>
+              <h2 className="t-h2 mt-2">Six Mondays, as they happen</h2>
             </div>
             <p className="soft max-w-[32ch] text-[14.5px]">
-              Sept 14 · {ACCELERATOR.venue.name}, {ACCELERATOR.venue.building}
+              {ACCELERATOR.venue.name}, {ACCELERATOR.venue.building}
             </p>
           </div>
           <p className="t-lead prose-w mt-4">
-            First session: everyone in one room, laptops open, working on what
-            they already had. Every frame from the night is below — five more
-            Mondays after this one.
+            Not a gallery — every frame from every session, in order, as we go.
           </p>
         </Reveal>
 
-        {/* Masonry: every frame keeps its own ratio, so nothing is cropped. */}
-        <div className="mt-8 gap-4 [column-count:1] sm:[column-count:2] lg:[column-count:3]">
-          {WEEK_ONE.map((shot, i) => (
-            <Reveal key={shot.src} delay={(i % 3) * 60} className="mb-4 break-inside-avoid">
-              <figure>
-                <div
-                  className="relative w-full overflow-hidden rounded-[14px]"
-                  style={{ aspectRatio: shot.aspect }}
-                >
-                  <Image
-                    src={shot.src}
-                    alt={shot.alt}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 48vw, 32vw"
-                    className="object-cover"
-                  />
-                </div>
-                <figcaption className="soft mt-2 text-[13px]">
-                  {shot.caption}
-                </figcaption>
-              </figure>
+        {[...SESSIONS].reverse().map((session) => (
+          <div key={session.n} className="mt-12 border-t pt-10 first:border-t-0 first:pt-0">
+            <Reveal>
+              <div className="flex flex-wrap items-baseline gap-x-5 gap-y-1">
+                <p className="t-num text-[15px]" style={{ color: "var(--color-blue)" }}>
+                  {String(session.n).padStart(2, "0")}
+                </p>
+                <h3 className="t-h3 text-[20px]">{session.title}</h3>
+                <p className="soft text-[14px]">{session.date}</p>
+              </div>
+              <p className="t-lead prose-w mt-3 text-[16px]">{session.blurb}</p>
             </Reveal>
-          ))}
-        </div>
+
+            {/* Masonry: every frame keeps its own ratio, so nothing is cropped. */}
+            <div className="mt-7 gap-4 [column-count:1] sm:[column-count:2] lg:[column-count:3]">
+              {session.shots.map((shot, i) => (
+                <Reveal key={shot.src} delay={(i % 3) * 60} className="mb-4 break-inside-avoid">
+                  <figure>
+                    <div
+                      className="relative w-full overflow-hidden rounded-[14px]"
+                      style={{ aspectRatio: shot.aspect }}
+                    >
+                      <Image
+                        src={shot.src}
+                        alt={shot.alt}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 48vw, 32vw"
+                        className="object-cover"
+                      />
+                    </div>
+                    <figcaption className="soft mt-2 text-[13px]">{shot.caption}</figcaption>
+                  </figure>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        ))}
       </section>
 
       <section className="shell pb-20">
@@ -356,8 +367,8 @@ export default function AcceleratorPage() {
             </div>
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[14px]">
               <Image
-                src={WEEK_ONE[3].src}
-                alt={WEEK_ONE[3].alt}
+                src={SESSIONS[1].shots[3].src}
+                alt={SESSIONS[1].shots[3].alt}
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover"

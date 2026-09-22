@@ -280,75 +280,162 @@ export type Shot = {
   aspect: string;
 };
 
-/** Week one of the Fall 2026 cohort — Sept 14 at Frontier RTP, Building 600. */
-export const WEEK_ONE: Shot[] = [
+export type Session = {
+  n: number;
+  date: string;
+  title: string;
+  blurb: string;
+  shots: Shot[];
+};
+
+/** Every Monday of the Fall 2026 cohort, newest last. Week three appends here. */
+export const SESSIONS: Session[] = [
   {
-    src: "/media/week1/banner-table.webp",
-    alt: "The Capture Success banner hung at Frontier RTP before the first session",
-    caption: "Set up before the doors opened",
-    aspect: "4 / 3",
+    n: 1,
+    date: "Sept 14",
+    title: "Foundations",
+    blurb:
+      "First session. Everyone in one room, laptops open, working on whatever they already had.",
+    shots: [
+      {
+        src: "/media/week1/banner-table.webp",
+        alt: "The Capture Success banner hung at Frontier RTP before the first session",
+        caption: "Set up before the doors opened",
+        aspect: "4 / 3",
+      },
+      {
+        src: "/media/week1/room-wide.webp",
+        alt: "The full room at the first session of the Fall 2026 cohort",
+        caption: "Week one — Frontier RTP, Building 600",
+        aspect: "4 / 3",
+      },
+      {
+        src: "/media/week1/teams-working.webp",
+        alt: "A student team working on laptops during the first session",
+        caption: "Teams heads-down straight after the session",
+        aspect: "4 / 3",
+      },
+      {
+        src: "/media/week1/kickoff.webp",
+        alt: "Students seated for the opening session of the accelerator",
+        caption: "Kickoff — six Mondays to go",
+        aspect: "4 / 3",
+      },
+      {
+        src: "/media/week1/building.webp",
+        alt: "Students building at the tables during week one",
+        caption: "Everyone brought something they were already working on",
+        aspect: "4 / 3",
+      },
+      {
+        src: "/media/week1/banner-night.webp",
+        alt: "Two students holding the Capture Success banner outside Frontier RTP at night",
+        caption: "Packing up outside Building 600",
+        aspect: "3 / 4",
+      },
+      {
+        src: "/media/week1/heads-down.webp",
+        alt: "Three students working on laptops at the first session",
+        caption: "Week one, second half",
+        aspect: "4 / 3",
+      },
+      {
+        src: "/media/week1/presenting.webp",
+        alt: "Organisers running the first session from the front of the room",
+        caption: "Running the room ourselves",
+        aspect: "4 / 3",
+      },
+      {
+        src: "/media/week1/session-talk.webp",
+        alt: "A Capture Success organiser talking to the room during week one",
+        caption: "Week one, from the front",
+        aspect: "4 / 3",
+      },
+      {
+        src: "/media/week1/room-setup.webp",
+        alt: "Students finding seats before the first session starts",
+        caption: "Doors open at six",
+        aspect: "4 / 3",
+      },
+      {
+        src: "/media/week1/presenting-tall.webp",
+        alt: "An organiser presenting to the seated room during week one",
+        caption: "First session, Sept 14",
+        aspect: "3 / 4",
+      },
+    ],
   },
   {
-    src: "/media/week1/room-wide.webp",
-    alt: "The full room at the first session of the Fall 2026 cohort",
-    caption: "Week one — Frontier RTP, Building 600",
-    aspect: "4 / 3",
-  },
-  {
-    src: "/media/week1/teams-working.webp",
-    alt: "A student team working on laptops during the first session",
-    caption: "Teams heads-down straight after the session",
-    aspect: "4 / 3",
-  },
-  {
-    src: "/media/week1/kickoff.webp",
-    alt: "Students seated for the opening session of the accelerator",
-    caption: "Kickoff — six Mondays to go",
-    aspect: "4 / 3",
-  },
-  {
-    src: "/media/week1/building.webp",
-    alt: "Students building at the tables during week one",
-    caption: "Everyone brought something they were already working on",
-    aspect: "4 / 3",
-  },
-  {
-    src: "/media/week1/banner-night.webp",
-    alt: "Two students holding the Capture Success banner outside Frontier RTP at night",
-    caption: "Packing up outside Building 600",
-    aspect: "3 / 4",
-  },
-  {
-    src: "/media/week1/heads-down.webp",
-    alt: "Three students working on laptops at the first session",
-    caption: "Week one, second half",
-    aspect: "4 / 3",
-  },
-  {
-    src: "/media/week1/presenting.webp",
-    alt: "Organisers running the first session from the front of the room",
-    caption: "Running the room ourselves",
-    aspect: "4 / 3",
-  },
-  {
-    src: "/media/week1/session-talk.webp",
-    alt: "A Capture Success organiser talking to the room during week one",
-    caption: "Week one, from the front",
-    aspect: "4 / 3",
-  },
-  {
-    src: "/media/week1/room-setup.webp",
-    alt: "Students finding seats before the first session starts",
-    caption: "Doors open at six",
-    aspect: "4 / 3",
-  },
-  {
-    src: "/media/week1/presenting-tall.webp",
-    alt: "An organiser presenting to the seated room during week one",
-    caption: "First session, Sept 14",
-    aspect: "3 / 4",
+    n: 2,
+    date: "Sept 21",
+    title: "Founder Networking Night",
+    blurb:
+      "The night we opened the room. Founders and operators from around the Triangle came in, talked about what the early days actually looked like, and then stayed so the cohort could ask them anything.",
+    shots: [
+      {
+        src: "/media/week2/hallway-a.webp",
+        alt: "Three students in conversation with a visiting founder in the corridor outside the room",
+        caption: "The conversations moved out into the corridor",
+        aspect: "3 / 4",
+      },
+      {
+        src: "/media/week2/hallway-b.webp",
+        alt: "Three students talking with a visiting operator outside the session room",
+        caption: "Twenty minutes with someone who has already done it",
+        aspect: "3 / 4",
+      },
+      {
+        src: "/media/week2/go-talk.webp",
+        alt: "The room during the networking night, with the instruction on screen",
+        caption: "The only instruction that mattered",
+        aspect: "3 / 4",
+      },
+      {
+        src: "/media/week2/room-mingle.webp",
+        alt: "Students and visiting founders talking in small groups after the talks",
+        caption: "What the night was actually for",
+        aspect: "4 / 3",
+      },
+      {
+        src: "/media/week2/guest-a.webp",
+        alt: "A visiting founder speaking to the cohort during week two",
+        caption: "Guests took the room one at a time",
+        aspect: "4 / 3",
+      },
+      {
+        src: "/media/week2/room-full.webp",
+        alt: "The full room at the Founder Networking Night",
+        caption: "Week two, and nobody left early",
+        aspect: "3 / 4",
+      },
+      {
+        src: "/media/week2/guest-b.webp",
+        alt: "A visiting operator talking to the seated cohort",
+        caption: "What the early days were really like",
+        aspect: "4 / 3",
+      },
+      {
+        src: "/media/week2/guest-c.webp",
+        alt: "A guest speaking to students during the networking night",
+        caption: "Questions from the floor, no slides",
+        aspect: "4 / 3",
+      },
+      {
+        src: "/media/week2/opening.webp",
+        alt: "A Capture Success organiser opening the Founder Networking Night",
+        caption: "Opening the night",
+        aspect: "4 / 3",
+      },
+    ],
   },
 ];
+
+/** Flat, newest first — for the home filmstrip. */
+export const ALL_SHOTS: Shot[] = [...SESSIONS].reverse().flatMap((s) => s.shots);
+
+/** Kept so existing imports keep working. */
+export const WEEK_ONE: Shot[] = SESSIONS[0].shots;
+
 
 // ---------------------------------------------------------------------------
 // Companies

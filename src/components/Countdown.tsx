@@ -27,10 +27,13 @@ export default function Countdown({
   iso,
   label = "First session begins in",
   overLabel = "The cohort",
+  /** Sessions already run. Passed in so the copy cannot go stale. */
+  done = 0,
 }: {
   iso: string;
   label?: string;
   overLabel?: string;
+  done?: number;
 }) {
   const target = new Date(iso).getTime();
   const [t, setT] = useState<ReturnType<typeof remaining> | null>(null);
@@ -57,7 +60,7 @@ export default function Countdown({
       <>
         <p className="t-kicker">{overLabel}</p>
         <p className="t-h3 mt-3" style={{ color: "var(--color-blue)" }}>
-          In session — week one done
+          In session{done ? ` — ${done} of 6 done` : ""}
         </p>
       </>
     );
