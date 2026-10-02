@@ -620,6 +620,7 @@ export const PEOPLE: Person[] = [
   { name: "Ketav Karthikeyan" },
   { name: "Rohit Gunturi" },
   { name: "Aryan Mahalingam" },
+  { name: "Rohan Pradhan", role: "Janitor" },
 ];
 
 // ---------------------------------------------------------------------------
