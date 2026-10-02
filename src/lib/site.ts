@@ -610,12 +610,21 @@ export type Person = {
   founder?: boolean;
   /** Square headshot. Initials are the fallback, so this is optional forever. */
   photo?: string;
+  /** One line, in plain language. What they actually do here. */
+  bio?: string;
+  linkedin?: string;
 };
 
 /** The whole board as one list — no separation. */
 export const PEOPLE: Person[] = [
   { name: "Amogh Gotaparthy", founder: true },
-  { name: "Dhruva Valluru", founder: true, photo: "/media/people/dhruva-valluru.webp" },
+  {
+    name: "Dhruva Valluru",
+    founder: true,
+    photo: "/media/people/dhruva-valluru.webp",
+    bio: "Co-founded Capture Success as a high schooler and helped build the free six-week accelerator it runs at Frontier RTP.",
+    linkedin: "https://www.linkedin.com/in/dhruva-valluru-37441293/",
+  },
   { name: "Dhruv Mishra", founder: true },
   { name: "Neeraj Sivashankar", founder: true },
   { name: "Saatvik Santosh" },

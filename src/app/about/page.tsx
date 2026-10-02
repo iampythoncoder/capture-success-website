@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import { IconLinkedIn } from "@/components/Icons";
 import { ACCELERATOR_FORM, PEOPLE } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -85,43 +86,64 @@ export default function AboutPage() {
           <p className="t-kicker">The team</p>
           <h2 className="t-h2 mt-2">Who runs it</h2>
         </Reveal>
-        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {PEOPLE.map((p, i) => (
-            <Reveal key={p.name} delay={(i % 3) * 60}>
-              <div className="card flex items-center gap-4 p-5">
-                {p.photo ? (
-                  <span className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full">
-                    <Image
-                      src={p.photo}
-                      alt={p.name}
-                      fill
-                      sizes="48px"
-                      className="object-cover"
-                    />
-                  </span>
-                ) : (
-                  <span
-                    className="grid h-12 w-12 shrink-0 place-items-center rounded-full text-[15px] font-extrabold"
-                    style={{
-                      background: "var(--color-surface-2)",
-                      color: "var(--color-blue)",
-                    }}
-                  >
-                    {initials(p.name)}
-                  </span>
-                )}
-                <div className="min-w-0">
-                  <p className="t-h3 text-[17px]">{p.name}</p>
-                  {p.role && <p className="soft text-[13px]">{p.role}</p>}
-                  {p.founder && (
-                    <p
-                      className="mt-0.5 text-[12px] font-bold"
-                      style={{ color: "var(--color-blue)" }}
+            <Reveal key={p.name} delay={(i % 3) * 60} className="h-full">
+              <div className="card flex h-full flex-col p-6">
+                <div className="flex items-center gap-4">
+                  {p.photo ? (
+                    <span className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full">
+                      <Image
+                        src={p.photo}
+                        alt={p.name}
+                        fill
+                        sizes="80px"
+                        className="object-cover"
+                      />
+                    </span>
+                  ) : (
+                    <span
+                      className="grid h-20 w-20 shrink-0 place-items-center rounded-full text-[21px] font-extrabold"
+                      style={{
+                        background: "var(--color-surface-2)",
+                        color: "var(--color-blue)",
+                      }}
                     >
-                      Co-founder
-                    </p>
+                      {initials(p.name)}
+                    </span>
                   )}
+
+                  <div className="min-w-0">
+                    <p className="t-h3 text-[18px]">{p.name}</p>
+                    {p.role && <p className="soft mt-0.5 text-[13.5px]">{p.role}</p>}
+                    {p.founder && (
+                      <p
+                        className="mt-1 text-[12.5px] font-bold"
+                        style={{ color: "var(--color-blue)" }}
+                      >
+                        Co-founder
+                      </p>
+                    )}
+                  </div>
                 </div>
+
+                {p.bio && (
+                  <p className="muted mt-4 text-[14.5px] leading-relaxed">{p.bio}</p>
+                )}
+
+                {p.linkedin && (
+                  <a
+                    href={p.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${p.name} on LinkedIn`}
+                    className="mt-auto inline-flex w-fit items-center gap-2 pt-5 text-[13.5px] font-semibold transition-colors"
+                    style={{ color: "var(--color-soft)" }}
+                  >
+                    <IconLinkedIn size={17} />
+                    LinkedIn
+                  </a>
+                )}
               </div>
             </Reveal>
           ))}
