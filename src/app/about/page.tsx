@@ -89,15 +89,27 @@ export default function AboutPage() {
           {PEOPLE.map((p, i) => (
             <Reveal key={p.name} delay={(i % 3) * 60}>
               <div className="card flex items-center gap-4 p-5">
-                <span
-                  className="grid h-12 w-12 shrink-0 place-items-center rounded-full text-[15px] font-extrabold"
-                  style={{
-                    background: "var(--color-surface-2)",
-                    color: "var(--color-blue)",
-                  }}
-                >
-                  {initials(p.name)}
-                </span>
+                {p.photo ? (
+                  <span className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full">
+                    <Image
+                      src={p.photo}
+                      alt={p.name}
+                      fill
+                      sizes="48px"
+                      className="object-cover"
+                    />
+                  </span>
+                ) : (
+                  <span
+                    className="grid h-12 w-12 shrink-0 place-items-center rounded-full text-[15px] font-extrabold"
+                    style={{
+                      background: "var(--color-surface-2)",
+                      color: "var(--color-blue)",
+                    }}
+                  >
+                    {initials(p.name)}
+                  </span>
+                )}
                 <div className="min-w-0">
                   <p className="t-h3 text-[17px]">{p.name}</p>
                   {p.role && <p className="soft text-[13px]">{p.role}</p>}

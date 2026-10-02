@@ -608,12 +608,14 @@ export type Person = {
   name: string;
   role?: string;
   founder?: boolean;
+  /** Square headshot. Initials are the fallback, so this is optional forever. */
+  photo?: string;
 };
 
 /** The whole board as one list — no separation. */
 export const PEOPLE: Person[] = [
   { name: "Amogh Gotaparthy", founder: true },
-  { name: "Dhruva Valluru", founder: true },
+  { name: "Dhruva Valluru", founder: true, photo: "/media/people/dhruva-valluru.webp" },
   { name: "Dhruv Mishra", founder: true },
   { name: "Neeraj Sivashankar", founder: true },
   { name: "Saatvik Santosh" },
