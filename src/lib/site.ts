@@ -618,7 +618,6 @@ export type Person = {
 /** The whole board as one list — no separation. */
 export const PEOPLE: Person[] = [
   { name: "Amogh Gotaparthy", founder: true },
-  { name: "Dhruva Valluru", founder: true },
   { name: "Dhruv Mishra", founder: true },
   { name: "Neeraj Sivashankar", founder: true },
   { name: "Saatvik Santosh" },
