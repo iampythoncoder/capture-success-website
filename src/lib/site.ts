@@ -619,12 +619,24 @@ export type Person = {
 export const PEOPLE: Person[] = [
   { name: "Rohan Pradhan", founder: true },
   { name: "Amogh Gotaparthy", founder: true },
+  {
+    name: "Dhruva Valluru",
+    founder: true,
+    photo: "/media/people/dhruva-valluru.webp",
+    bio: "Co-founded Capture Success as a high schooler and helped build the free six-week accelerator it runs at Frontier RTP.",
+    linkedin: "https://www.linkedin.com/in/dhruva-valluru-37441293/",
+  },
   { name: "Dhruv Mishra", founder: true },
   { name: "Neeraj Sivashankar", founder: true },
   { name: "Saatvik Santosh" },
   { name: "Ketav Karthikeyan" },
   { name: "Rohit Gunturi" },
-  { name: "Aryan Mahalingam" },
+  {
+    name: "Aryan Mahalingam",
+    photo: "/media/people/aryan-mahalingam.webp",
+    bio: "Co-founded Pharos, an AI drowning-detection system for home pools, where he leads the computer-vision work.",
+    linkedin: "https://www.linkedin.com/in/aryanmahalingham/",
+  },
 ];
 
 // ---------------------------------------------------------------------------
