@@ -617,8 +617,16 @@ export type Person = {
 
 /** The whole board as one list — no separation. */
 export const PEOPLE: Person[] = [
-  { name: "Rohan Pradhan", founder: true },
-  { name: "Amogh Gotaparthy", founder: true },
+  {
+    name: "Rohan Pradhan",
+    founder: true,
+    linkedin: "https://www.linkedin.com/in/rohan-pradhan-a60634423/",
+  },
+  {
+    name: "Amogh Gotaparthy",
+    founder: true,
+    linkedin: "https://www.linkedin.com/in/amoghgotaparthy/",
+  },
   {
     name: "Dhruva Valluru",
     founder: true,
@@ -626,10 +634,24 @@ export const PEOPLE: Person[] = [
     bio: "Co-founded Capture Success as a high schooler and helped build the free six-week accelerator it runs at Frontier RTP.",
     linkedin: "https://www.linkedin.com/in/dhruva-valluru-37441293/",
   },
-  { name: "Dhruv Mishra", founder: true },
-  { name: "Neeraj Sivashankar", founder: true },
-  { name: "Saatvik Santosh" },
-  { name: "Ketav Karthikeyan" },
+  {
+    name: "Dhruv Mishra",
+    founder: true,
+    linkedin: "https://www.linkedin.com/in/dhruv-mishra-280492288/",
+  },
+  {
+    name: "Neeraj Sivashankar",
+    founder: true,
+    linkedin: "https://www.linkedin.com/in/neeraj-sivashankar-345b14312/",
+  },
+  {
+    name: "Saatvik Santosh",
+    linkedin: "https://www.linkedin.com/in/saatvik-santosh-063983416/",
+  },
+  {
+    name: "Ketav Karthikeyan",
+    linkedin: "https://www.linkedin.com/in/ketav-karthikeyan-990886371/",
+  },
   { name: "Rohit Gunturi" },
   {
     name: "Aryan Mahalingam",
