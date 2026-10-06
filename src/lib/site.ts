@@ -620,11 +620,14 @@ export const PEOPLE: Person[] = [
   {
     name: "Rohan Pradhan",
     founder: true,
+    bio: "Head coach of a neighborhood summer-league swim team in Cary, and a year-round competitive swimmer with the TAC Titans.",
     linkedin: "https://www.linkedin.com/in/rohan-pradhan-a60634423/",
   },
   {
     name: "Amogh Gotaparthy",
+    photo: "/media/people/amogh-gotaparthy.webp",
     founder: true,
+    bio: "Co-founded Capture Success and is COO of Cubo, a company building a distraction-detection device.",
     linkedin: "https://www.linkedin.com/in/amoghgotaparthy/",
   },
   {
@@ -636,27 +639,35 @@ export const PEOPLE: Person[] = [
   },
   {
     name: "Dhruv Mishra",
+    photo: "/media/people/dhruv-mishra.webp",
     founder: true,
+    bio: "Research assistant in Stephen Pizer's lab at UNC Chapel Hill, evaluating a deep-learning model that predicts 3D anatomical shape from MRI data.",
     linkedin: "https://www.linkedin.com/in/dhruv-mishra-280492288/",
   },
   {
     name: "Neeraj Sivashankar",
+    photo: "/media/people/neeraj-sivashankar.webp",
     founder: true,
+    bio: "Coached DECA Operations Research teams through research design, data analysis and presentations before becoming chief of staff of the 400-plus-member chapter.",
     linkedin: "https://www.linkedin.com/in/neeraj-sivashankar-345b14312/",
   },
   {
     name: "Saatvik Santosh",
+    photo: "/media/people/saatvik-santosh.webp",
+    bio: "Built the Capture Success website and handles the technical side of team projects, from web development to microcontrollers, sensors and hardware prototyping.",
     linkedin: "https://www.linkedin.com/in/saatvik-santosh-063983416/",
   },
   {
     name: "Ketav Karthikeyan",
+    photo: "/media/people/ketav-karthikeyan.webp",
+    bio: "Does independent neuroscience research and serves as secretary of the Fuquay-Varina Teen Council.",
     linkedin: "https://www.linkedin.com/in/ketav-karthikeyan-990886371/",
   },
   { name: "Rohit Gunturi" },
   {
-    name: "Aryan Mahalingam",
-    photo: "/media/people/aryan-mahalingam.webp",
-    bio: "Co-founded Pharos, an AI drowning-detection system for home pools, where he leads the computer-vision work.",
+    name: "Aryan Mahalingham",
+    photo: "/media/people/aryan-mahalingham.webp",
+    bio: "Co-founded Pharos, a pool safety system that alerts a phone when a swimmer stops moving or floats face down, and trains its computer-vision models.",
     linkedin: "https://www.linkedin.com/in/aryanmahalingham/",
   },
 ];
