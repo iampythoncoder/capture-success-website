@@ -402,37 +402,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Finnovate ─────────────────────────────────────────────────── */}
-      <section className="shell py-20">
-        <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
-          <Reveal>
-            <div className="relative aspect-[3/2] w-full overflow-hidden rounded-[18px]">
-              <Image
-                src="/media/finnovate/judging-panel.webp"
-                alt="The judging panel at Finnovate Startup Spotlight"
-                fill
-                sizes="(max-width: 1024px) 100vw, 48vw"
-                className="object-cover"
-              />
-            </div>
-          </Reveal>
-          <Reveal delay={80}>
-            <p className="t-kicker">Finnovate</p>
-            <h2 className="t-h2 mt-2 max-w-[20ch]">
-              We run the events too.
-            </h2>
-            <p className="t-lead mt-4">
-              Startup Spotlight brought more than 20 teams in front of six
-              business professionals, with the top three sharing over $2,500 in
-              prizes. We built it with our school&apos;s DECA chapter.
-            </p>
-            <Link href="/finnovate" className="lnk mt-6">
-              See the event <IconArrow size={16} />
-            </Link>
-          </Reveal>
-        </div>
-      </section>
-
       {/* ── Ways in ───────────────────────────────────────────────────── */}
       <section id="contact" className="shell scroll-mt-24 pb-4">
         <Reveal>

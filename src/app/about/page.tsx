@@ -32,16 +32,6 @@ const STORY = [
     },
   },
   {
-    title: "First we proved students would show up",
-    body: "Before the accelerator existed, we ran Finnovate — months of weekly student-focused fintech writing, then Startup Spotlight: a live pitch competition where more than twenty teams presented to six business professionals. The room was full. That was the proof.",
-    img: {
-      src: "/media/finnovate/live-pitch.webp",
-      aspect: "3 / 2",
-      alt: "A student pitching live at Startup Spotlight",
-      caption: "Startup Spotlight — 20+ teams pitched live",
-    },
-  },
-  {
     title: "Then our first cohort started winning",
     body: "Beacon, a team guided start to finish inside our first cohort, took first place at TiE Young Entrepreneurs Regionals and qualified for nationals in Seattle. Around them a network formed — today it's ten student-led companies, including VisioCourt, which runs live court tracking for the Town of Morrisville and presented at MIT.",
     img: {

@@ -673,46 +673,6 @@ export const PEOPLE: Person[] = [
 ];
 
 // ---------------------------------------------------------------------------
-// Finnovate
-// ---------------------------------------------------------------------------
-
-export const FINNOVATE = {
-  stats: [
-    { value: "20+", label: "Teams presented" },
-    { value: "06", label: "Judges" },
-    { value: "03", label: "Winning teams" },
-    { value: "$2.5K+", label: "Prize money" },
-  ],
-  photos: [
-    {
-      src: "/media/finnovate/judging-panel.webp",
-      title: "Judging panel",
-      caption: "Six business professionals",
-    },
-    {
-      src: "/media/finnovate/live-pitch.webp",
-      title: "Live pitch",
-      caption: "Teams presenting Startup Spotlight",
-    },
-    {
-      src: "/media/finnovate/award-presentation.webp",
-      title: "Award presentation",
-      caption: "After the pitch",
-    },
-    {
-      src: "/media/finnovate/winning-team.webp",
-      title: "Winning team",
-      caption: "Top three shared $2,500+",
-    },
-    {
-      src: "/media/finnovate/event-group.webp",
-      title: "Organizers and judges",
-      caption: "Built with our school's DECA chapter",
-    },
-  ],
-} as const;
-
-// ---------------------------------------------------------------------------
 // Partners  — placeholder until the new partner list lands.
 // ---------------------------------------------------------------------------
 
@@ -840,11 +800,6 @@ export const MILESTONES = [
     body: "Sports-ops team VisioCourt medaled at the state conference and presented their research at MIT.",
   },
   {
-    date: "2026",
-    title: "Finnovate Startup Spotlight",
-    body: "20+ teams pitched to six business professionals; the top three shared $2,500+ in prizes.",
-  },
-  {
     date: "Aug 2026",
     title: "VisioCourt goes live in Morrisville",
     body: "Live tennis and pickleball status across three Town of Morrisville facilities.",
@@ -871,6 +826,5 @@ export const NAV = [
   { href: "/about", label: "About" },
   { href: "/accelerator", label: "Accelerator" },
   { href: "/companies", label: "Companies" },
-  { href: "/finnovate", label: "Finnovate" },
   { href: "/apply", label: "Apply" },
 ] as const;

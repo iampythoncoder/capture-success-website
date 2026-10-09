@@ -1,7 +1,7 @@
 # Capture Success — capturesuccess.org
 
-Site for Capture Success, a student startup network in the Triangle. Six pages
-(home, accelerator, companies, apply, board, finnovate), the Fall 2026 cohort,
+Site for Capture Success, a student startup network in the Triangle. Five pages
+(home, about, accelerator, companies, apply), the Fall 2026 cohort,
 partner wall, and company profiles.
 
 **Live:** https://capture-success.vercel.app (to become capturesuccess.org)
