@@ -23,7 +23,7 @@ function initials(name: string) {
 const STORY = [
   {
     title: "It started with watching friends build alone",
-    body: "Capture Success was started in 2026 by a group of high school students in the Triangle. The problem we kept seeing wasn't a lack of ideas — classmates had real ones — it was that everyone was building solo: no teammates, no feedback, nobody who had shipped anything before. So we made the room we wished existed.",
+    body: "Capture Success was started in 2024 by a group of high school students in the Triangle. The problem we kept seeing wasn't a lack of ideas — classmates had real ones — it was that everyone was building solo: no teammates, no feedback, nobody who had shipped anything before. So we made the room we wished existed.",
     img: {
       src: "/media/week1/teams-working.webp",
       aspect: "4 / 3",
