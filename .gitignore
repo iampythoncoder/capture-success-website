@@ -40,10 +40,30 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# macOS/Finder duplicates ("Icons 2.tsx", "CountUp 3.tsx", "page copy.tsx")
-* [0-9].*
-* [0-9]
-* copy.*
-* copy
-* copy [0-9].*
-* copy [0-9]
+# macOS/Finder duplicates of source files ("Icons 2.tsx", "CountUp 10.ts",
+# "page copy.tsx", "page copy 2.tsx").
+#
+# Deliberately limited to code extensions. A bare "* [0-9].*" also swallows
+# legitimate content — "public/media/cohort 2.jpg", "content/chapter 2.md" —
+# which then silently fails to deploy. Keep this list extension-scoped.
+# (.gitignore has no brace expansion, hence one line per extension.)
+* [0-9].ts
+* [0-9].tsx
+* [0-9].js
+* [0-9].jsx
+* [0-9].css
+* [0-9][0-9].ts
+* [0-9][0-9].tsx
+* [0-9][0-9].js
+* [0-9][0-9].jsx
+* [0-9][0-9].css
+* copy.ts
+* copy.tsx
+* copy.js
+* copy.jsx
+* copy.css
+* copy [0-9].ts
+* copy [0-9].tsx
+* copy [0-9].js
+* copy [0-9].jsx
+* copy [0-9].css
