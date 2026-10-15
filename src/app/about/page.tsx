@@ -33,7 +33,7 @@ const STORY = [
   },
   {
     title: "Then our first cohort started winning",
-    body: "Beacon, a team guided start to finish inside our first cohort, took first place at TiE Young Entrepreneurs Regionals and qualified for nationals in Seattle. Around them a network formed — today it's ten student-led companies, including VisioCourt, which runs live court tracking for the Town of Morrisville and presented at MIT.",
+    body: "Beacon, a team guided start to finish inside our first cohort, took first place at TiE Young Entrepreneurs Regionals and qualified for nationals in Seattle. Around them a network formed — today it's ten student-led companies, including VisioCourt, which supplies the live court-occupancy data at three Town of Morrisville facilities and presented at MIT.",
     img: {
       src: "/media/beacon-tye-regionals.jpg",
       aspect: "4 / 3",

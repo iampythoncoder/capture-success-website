@@ -466,27 +466,26 @@ export const FEATURED: Company[] = [
     name: "PyroSight",
     sector: "Firefighter safety",
     blurb:
-      "Helmet-mounted thermal vision that finds people, exits, and hazards in dense smoke.",
+      "A clip-on thermal sight for firefighter helmets, designed to find people and the way out when visibility drops to zero.",
     about: [
-      "PyroSight is a helmet-mounted vision system for structural firefighting. It fuses thermal imaging, computer vision, and on-device AI to locate people, exits, and hazards when visibility drops to zero.",
-      "Everything runs locally on a helmet-mounted accelerator, so the system keeps working deep inside concrete structures with no connectivity — no cloud, no lag. Detection models are trained on live-burn scenarios rather than generic image sets, so they recognise what off-the-shelf vision has never seen.",
+      "PyroSight is a design-stage thermal sight that clips onto a firefighter's helmet. A thermal camera feeds on-device detection that flags people and fire, and a motion-based tracker holds a route back to the door when smoke has taken away every other reference.",
+      "It is built to run entirely on the helmet — no cloud, no connectivity — at roughly 16 frames a second, and the team puts the parts cost of a full prototype at about $543. The hardware has not been built or certified yet, and the detection models are trained on synthetic data while the team works toward live testing.",
     ],
     founders: ["Sheehan", "Milind", "Aarush", "Atharv"],
     href: "https://pyrosight-website.vercel.app/",
     logo: "/portfolio/pyrosight.svg",
     highlights: [
-      { label: "Sensor-to-display latency", value: "39 ms" },
-      { label: "Continuous edge runtime", value: "12 hrs" },
-      { label: "Systems working in real time", value: "16" },
+      { label: "Stage", value: "Design — not yet built" },
+      { label: "On-device frame rate", value: "~16 fps" },
+      { label: "Prototype parts cost", value: "~$543" },
     ],
     capabilities: [
-      "Thermal imaging AI that resolves human signatures through zero-visibility smoke",
-      "On-device edge processing — works with no connectivity",
-      "Human detection for partial, occluded, and prone bodies",
-      "Intelligent navigation that re-plans egress routes many times a second",
+      "Thermal imaging meant to resolve human signatures through zero-visibility smoke",
+      "On-device processing, designed to work with no connectivity",
+      "Human detection aimed at partial, occluded, and prone bodies",
+      "A motion-based route back to the door when nothing else is visible",
       "Exit recognition — doors, windows, and stairwells mapped on entry",
-      "Structural risk analysis with live collapse probability",
-      "Real-time hazard detection for gas plumes, arcing, and backdraft",
+      "Hazard flagging for gas plumes, arcing, and backdraft",
     ],
     featured: true,
   },
@@ -504,7 +503,7 @@ export const FEATURED: Company[] = [
     href: "https://visiocourt.com/",
     logo: "/portfolio/visiocourt.png",
     highlights: [
-      { label: "Town of Morrisville", value: "Live at 3 facilities" },
+      { label: "Town of Morrisville", value: "Court data at 3 facilities" },
       { label: "DECA States", value: "2nd place" },
       { label: "Presented at", value: "MIT" },
     ],
@@ -587,7 +586,7 @@ export const ALSO_BUILDING: Company[] = [
   { n: "10", name: "RoboGripper", sector: "Robotics", blurb: "", logo: "/portfolio/robogripper.svg" },
 ];
 
-/** Facilities where VisioCourt is live. */
+/** Town of Morrisville facilities VisioCourt supplies court-occupancy data for. */
 export const MORRISVILLE_SITES = [
   "Church Street Park",
   "Morrisville Community Park",
@@ -802,7 +801,7 @@ export const MILESTONES = [
   {
     date: "Aug 2026",
     title: "VisioCourt goes live in Morrisville",
-    body: "Live tennis and pickleball status across three Town of Morrisville facilities.",
+    body: "VisioCourt supplies the live tennis, pickleball and racquetball court status at three Town of Morrisville facilities.",
   },
   {
     date: "Sept 2026",
