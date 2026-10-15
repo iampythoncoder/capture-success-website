@@ -17,10 +17,11 @@ import {
 } from "@/lib/site";
 
 const STATS = [
-  { v: 10, suffix: "", l: "Student-led companies" },
-  { v: 3, suffix: "", l: "Town facilities running our tech" },
-  { v: 6, suffix: "", l: "Weeks, free, in person" },
-  { v: 12, suffix: "", l: "Triangle partners" },
+  { v: 10, prefix: "", suffix: "", l: "Student-led companies" },
+  { v: 8, prefix: "$", suffix: "K", l: "Raised to fund our teams" },
+  { v: 3, prefix: "", suffix: "", l: "Town facilities running our tech" },
+  { v: 6, prefix: "", suffix: "", l: "Weeks, free, in person" },
+  { v: 12, prefix: "", suffix: "", l: "Triangle partners" },
 ];
 
 const WAYS = [
@@ -133,11 +134,11 @@ export default function Home() {
 
       {/* ── Stats ─────────────────────────────────────────────────────── */}
       <section className="shell">
-        <div className="tile grid gap-8 p-8 sm:grid-cols-2 lg:grid-cols-4 lg:p-10">
+        <div className="tile grid gap-8 p-8 sm:grid-cols-2 lg:grid-cols-5 lg:p-10">
           {STATS.map((s) => (
             <div key={s.l}>
               <p className="t-num text-[2.5rem] leading-none">
-                <CountUp to={s.v} suffix={s.suffix} />
+                <CountUp to={s.v} prefix={s.prefix} suffix={s.suffix} />
               </p>
               <p className="muted mt-2 text-[14.5px]">{s.l}</p>
             </div>
