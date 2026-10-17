@@ -805,6 +805,11 @@ export const MILESTONES = [
   },
   {
     date: "Sept 2026",
+    title: "Morrisville's mayor commends the program",
+    body: "Mayor TJ Cawley wrote to the team on Sept 7, calling the free accelerator a mark of leadership, vision, and dedication, and offering the letter as his recognition of the work.",
+  },
+  {
+    date: "Sept 2026",
     title: "Fall 2026 accelerator begins",
     body: "Week one ran Sept 14 at Frontier RTP — six Mondays with UNC, Launch Chapel Hill, CED, Wake Tech, and more in the room.",
   },
