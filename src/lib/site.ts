@@ -663,12 +663,6 @@ export const PEOPLE: Person[] = [
     linkedin: "https://www.linkedin.com/in/ketav-karthikeyan-990886371/",
   },
   { name: "Rohit Gunturi" },
-  {
-    name: "Aryan Mahalingham",
-    photo: "/media/people/aryan-mahalingham.webp",
-    bio: "Co-founded Pharos, a pool safety system that alerts a phone when a swimmer stops moving or floats face down, and trains its computer-vision models.",
-    linkedin: "https://www.linkedin.com/in/aryanmahalingham/",
-  },
 ];
 
 // ---------------------------------------------------------------------------
